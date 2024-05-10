@@ -83,23 +83,25 @@ def title_affiliation(df, file_path_to_upload):
     df = pd.DataFrame(df)
     df.drop(columns=['publication_year'], inplace=True)
     
-    print(df['affiliation_name'])
-    print(df['affiliation_country'])
-
-    # print(df_affiliation_name_expanded.head()['affiliation_name'], len(df_affiliation_name_expanded))
-    # print(df_affiliation_country_expanded.head()['affiliation_country'], len(df_affiliation_country_expanded))
-
-    # new_df = pd.DataFrame({
-    #     'title': df_affiliation_name_expanded['title'].tolist(),
-    #     'affiliation_name': df_affiliation_name_expanded['affiliation_name'].tolist(),
-    #     'affiliation_country': df_affiliation_country_expanded['affiliation_country'].tolist(),
-    #     'keywords': df_affiliation_name_expanded['keywords'].tolist(),
-    # })
-
-    # new_df.dropna(subset=['affiliation_name'], inplace=True)
-    # new_df.dropna(subset=['affiliation_country'], inplace=True)
+    for index, row in df.iterrows():
+        string_to_list(row['keywords'], index, df, 'keywords')
+        string_to_list(row['affiliation_name'], index, df, 'affiliation_name')
+        string_to_list(row['affiliation_country'], index, df, 'affiliation_country')
     
-    # # print(new_df.head()['affiliation_name'])
-    # grouped_df = new_df.groupby(['title', 'affiliation_name', 'affiliation_country', 'keywords']).size().reset_index(name='count')
+    df_affiliation_name_expanded = df.explode('affiliation_name')
+    df_affiliation_country_expanded = df.explode('affiliation_country')
+    
+    new_df = pd.DataFrame({
+        'title': df_affiliation_name_expanded['title'].tolist(),
+        'affiliation_name': df_affiliation_name_expanded['affiliation_name'].tolist(),
+        'affiliation_country': df_affiliation_country_expanded['affiliation_country'].tolist(),
+        'keywords': df_affiliation_name_expanded['keywords'].tolist(),
+    })
 
-    # print(grouped_df.head()['affiliation_name'])
+    new_df.dropna(subset=['affiliation_name'], inplace=True)
+    new_df.dropna(subset=['affiliation_country'], inplace=True)
+    
+    # print(new_df.head()['affiliation_name'])
+    grouped_df = new_df.groupby(['title', 'affiliation_name', 'affiliation_country', 'keywords']).size().reset_index(name='count')
+
+    grouped_df.to_csv(file_path_to_upload + 'title_affiliation.csv', index=False)

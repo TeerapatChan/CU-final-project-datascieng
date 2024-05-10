@@ -3,8 +3,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 # Read the CSV file
-df = pd.read_csv("airflow_data/title_affiliation.csv")
-df2 = pd.read_csv("airflow_data/title_keywords.csv")
+df = pd.read_csv("title_affiliation.csv")
+df2 = pd.read_csv("title_keywords.csv")
 st.title("Data Analysis of Chulalongkorn Research Papers")
 selected_option = st.selectbox(
     "Choose the top university of the data",
@@ -16,6 +16,8 @@ df_no_Thailand = df[df['affiliation_country'] != 'Thailand']
 def show_highest_collaboration_country(df):
     st.header('Country that collaborate with Chulalongkorn University')
     chart_data = df.groupby('affiliation_country').agg({'title': 'count'}).rename(columns={'title': 'number of Research Papers'}).reset_index()
+    chart_data = chart_data.nlargest(10, 'number of Research Papers').reset_index()
+    # print(chart_data)
     highest_value = chart_data['number of Research Papers'].max()
     # highest_collaboration_country = chart_data[chart_data['Number of Research Papers'] == highest_value]['Country'].values[0]
     highest_collaboration_country = chart_data[chart_data['number of Research Papers'] == highest_value]['affiliation_country'].values
@@ -36,7 +38,7 @@ def show_highest_collaboration_country(df):
         marker_color=colors, # marker color can be a single color value or an iterable
         text=chart_data['number of Research Papers'],
     )])
-    fig.update_layout(title_text='Highest collaboration country with Chulalongkorn University', xaxis_title='affiliation_country', yaxis_title='number of Research Papers')
+    fig.update_layout(title_text='Top 10 collaboration country with Chulalongkorn University', xaxis_title='affiliation_country', yaxis_title='number of Research Papers')
 
     # fig = px.bar(chart_data, x="Country", y="Number of Research Papers",text_auto='.s',color="Country", color_discrete_map={index: f"rgb({2*30},{2*20},{2*10})" if chart_data.loc[index]['Country'] == highest_collaboration_country else f"rgb({2*30},{2*20},{2*10})" for index in chart_data.index})
     fig.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
@@ -48,9 +50,11 @@ def show_highest_collaboration_country(df):
 
 def show_top_universities(df,highest_collaboration_country):
     for top_country in highest_collaboration_country:
-        st.write('All universities in '+ top_country + ' that collaborate with Chulalongkorn University')
+        st.write('Top 30 universities in '+ top_country + ' that collaborate with Chulalongkorn University')
         top_country_df = df[df['affiliation_country'] == top_country]
         chart_data = top_country_df.groupby('affiliation_name').agg({'title': 'count'}).rename(columns={'title': 'number of Research Papers'}).reset_index()
+        chart_data = chart_data.nlargest(30, 'number of Research Papers').reset_index()
+        # print(chart_data)
         st.bar_chart(chart_data, x='affiliation_name', y='number of Research Papers')
 # for top_country in highest_collaboration_country:
 #     st.header('All universities of '+ top_country + ' that collaborate with Thailand')

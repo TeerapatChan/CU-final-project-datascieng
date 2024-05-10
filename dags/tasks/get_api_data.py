@@ -12,11 +12,8 @@ def upload_to_minio(minio_client, bucket_name, object_name, file_path):
 
 def fetch_data(idx, apiKey, last_page, pages):
     dois = []
-    public_year = 2018
-    affiliation = "chulalongkorn%20niversity"
-    country = "thailand"
     for i in range(last_page,pages):
-        URL = f"https://api.elsevier.com/content/search/scopus?query=AFFILCOUNTRY({country})%20AND%20AFFILORG({affiliation})%20AND%20PUBYEAR%20<%20{public_year}&apiKey={apiKey}&start={str(idx * i)}&httpAccept=application/json"
+        URL = f"https://api.elsevier.com/content/search/scopus?query=AFFILCOUNTRY(thailand)%20AND%20AFFILORG(chulalongkorn%20university)%20AND%20PUBYEAR%20<%202018&apiKey={apiKey}&start={str(idx * i)}&httpAccept=application/json"
         response = requests.get(URL)
 
         if response.status_code == 200:
@@ -39,23 +36,26 @@ def get_api_data():
         secure=False
     )
     idx = 25
-    first_page = 0
-    num_pages = 40
-    dois = fetch_data(idx, apiKey, first_page, first_page + num_pages)
+    last_page = 0
+    dois = fetch_data(idx, apiKey, last_page, last_page+1)
     bucket_name = "datapipeline"
 
+    print(minio_client.bucket_exists(bucket_name))
+    print("Retrieved DOIs")
     for i in range(len(dois)):
         research_data = requests.get('https://api.elsevier.com/content/abstract/DOI:' + dois[i] + '?apiKey=' + apiKey + '&view=FULL&httpAccept=application/json')
 
-        if not os.path.exists('/opt/airflow/data/api_data_json'):
-            os.makedirs('/opt/airflow/data/api_data_json')
-            
-        file_path = f"/opt/airflow/data/api_data_json/research_{i}.json"
+        print(f"Retrieved data for DOI {i}")
+        print(os.getcwd())
+        file_path = f"/opt/airflow/dags/airflow_data/api_data_json/research_{i}.json"
         object_name = f"data/api_data_json/research_{i}.json"
         if research_data.status_code == 200:
-            with open(file_path, 'w', encoding='utf-8') as f:
+            print('Retrieved data:', research_data.json())
+            with open(file_path, 'w') as f:
+                print('Retrieved data:', research_data.json())
                 json.dump(research_data.json(), f)
             
+            print(f"Saved data to {file_path}")
             upload_to_minio(minio_client, bucket_name, object_name, file_path)
         else:
             print('Failed to retrieve data:', research_data.status_code)
