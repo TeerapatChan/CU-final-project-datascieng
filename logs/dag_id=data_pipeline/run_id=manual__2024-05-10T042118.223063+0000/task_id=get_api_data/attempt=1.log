@@ -1,0 +1,152 @@
+[2024-05-10T04:21:20.765+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T04:21:20.791+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.get_api_data manual__2024-05-10T04:21:18.223063+00:00 [queued]>
+[2024-05-10T04:21:20.802+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.get_api_data manual__2024-05-10T04:21:18.223063+00:00 [queued]>
+[2024-05-10T04:21:20.803+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-10T04:21:20.817+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_api_data> on 2024-05-10 04:21:18.223063+00:00
+[2024-05-10T04:21:20.823+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=14770) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T04:21:20.824+0000] {standard_task_runner.py:63} INFO - Started process 14772 to run task
+[2024-05-10T04:21:20.823+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'get_api_data', 'manual__2024-05-10T04:21:18.223063+00:00', '--job-id', '270', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpxj0da4k1']
+[2024-05-10T04:21:20.825+0000] {standard_task_runner.py:91} INFO - Job 270: Subtask get_api_data
+[2024-05-10T04:21:20.837+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T04:21:20.865+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.get_api_data manual__2024-05-10T04:21:18.223063+00:00 [running]> on host 3031e573f05c
+[2024-05-10T04:21:20.950+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='get_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T04:21:18.223063+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T04:21:18.223063+00:00'
+[2024-05-10T04:21:20.951+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T04:21:22.062+0000] {logging_mixin.py:188} INFO - Retrieved data for page 0
+[2024-05-10T04:21:23.598+0000] {logging_mixin.py:188} INFO - Retrieved data for page 1
+[2024-05-10T04:21:25.515+0000] {logging_mixin.py:188} INFO - Retrieved data for page 2
+[2024-05-10T04:21:27.278+0000] {logging_mixin.py:188} INFO - Retrieved data for page 3
+[2024-05-10T04:21:31.144+0000] {logging_mixin.py:188} INFO - Retrieved data for page 4
+[2024-05-10T04:21:32.669+0000] {logging_mixin.py:188} INFO - Retrieved data for page 5
+[2024-05-10T04:21:34.316+0000] {logging_mixin.py:188} INFO - Retrieved data for page 6
+[2024-05-10T04:21:38.539+0000] {logging_mixin.py:188} INFO - Retrieved data for page 7
+[2024-05-10T04:21:40.152+0000] {logging_mixin.py:188} INFO - Retrieved data for page 8
+[2024-05-10T04:21:44.564+0000] {logging_mixin.py:188} INFO - Retrieved data for page 9
+[2024-05-10T04:21:46.173+0000] {logging_mixin.py:188} INFO - Retrieved data for page 10
+[2024-05-10T04:21:48.443+0000] {logging_mixin.py:188} INFO - Retrieved data for page 11
+[2024-05-10T04:21:52.100+0000] {logging_mixin.py:188} INFO - Retrieved data for page 12
+[2024-05-10T04:21:53.938+0000] {logging_mixin.py:188} INFO - Retrieved data for page 13
+[2024-05-10T04:21:57.257+0000] {logging_mixin.py:188} INFO - Retrieved data for page 14
+[2024-05-10T04:22:00.270+0000] {logging_mixin.py:188} INFO - Retrieved data for page 15
+[2024-05-10T04:22:02.916+0000] {logging_mixin.py:188} INFO - Retrieved data for page 16
+[2024-05-10T04:22:06.285+0000] {logging_mixin.py:188} INFO - Retrieved data for page 17
+[2024-05-10T04:22:09.326+0000] {logging_mixin.py:188} INFO - Retrieved data for page 18
+[2024-05-10T04:22:11.139+0000] {logging_mixin.py:188} INFO - Retrieved data for page 19
+[2024-05-10T04:22:12.885+0000] {logging_mixin.py:188} INFO - Retrieved data for page 20
+[2024-05-10T04:22:14.533+0000] {logging_mixin.py:188} INFO - Retrieved data for page 21
+[2024-05-10T04:22:17.172+0000] {logging_mixin.py:188} INFO - Retrieved data for page 22
+[2024-05-10T04:22:19.452+0000] {logging_mixin.py:188} INFO - Retrieved data for page 23
+[2024-05-10T04:22:23.246+0000] {logging_mixin.py:188} INFO - Retrieved data for page 24
+[2024-05-10T04:22:26.477+0000] {logging_mixin.py:188} INFO - Retrieved data for page 25
+[2024-05-10T04:22:28.498+0000] {logging_mixin.py:188} INFO - Retrieved data for page 26
+[2024-05-10T04:22:30.323+0000] {logging_mixin.py:188} INFO - Retrieved data for page 27
+[2024-05-10T04:22:32.779+0000] {logging_mixin.py:188} INFO - Retrieved data for page 28
+[2024-05-10T04:22:34.891+0000] {logging_mixin.py:188} INFO - Retrieved data for page 29
+[2024-05-10T04:22:38.592+0000] {logging_mixin.py:188} INFO - Retrieved data for page 30
+[2024-05-10T04:22:40.260+0000] {logging_mixin.py:188} INFO - Retrieved data for page 31
+[2024-05-10T04:22:42.064+0000] {logging_mixin.py:188} INFO - Retrieved data for page 32
+[2024-05-10T04:22:45.069+0000] {logging_mixin.py:188} INFO - Retrieved data for page 33
+[2024-05-10T04:22:48.758+0000] {logging_mixin.py:188} INFO - Retrieved data for page 34
+[2024-05-10T04:22:51.700+0000] {logging_mixin.py:188} INFO - Retrieved data for page 35
+[2024-05-10T04:22:54.876+0000] {logging_mixin.py:188} INFO - Retrieved data for page 36
+[2024-05-10T04:22:59.605+0000] {logging_mixin.py:188} INFO - Retrieved data for page 37
+[2024-05-10T04:23:01.993+0000] {logging_mixin.py:188} INFO - Retrieved data for page 38
+[2024-05-10T04:23:04.079+0000] {logging_mixin.py:188} INFO - Retrieved data for page 39
+[2024-05-10T04:23:05.893+0000] {logging_mixin.py:188} INFO - Retrieved data for page 40
+[2024-05-10T04:23:08.659+0000] {logging_mixin.py:188} INFO - Retrieved data for page 41
+[2024-05-10T04:23:11.507+0000] {logging_mixin.py:188} INFO - Retrieved data for page 42
+[2024-05-10T04:23:14.093+0000] {logging_mixin.py:188} INFO - Retrieved data for page 43
+[2024-05-10T04:23:19.144+0000] {logging_mixin.py:188} INFO - Retrieved data for page 44
+[2024-05-10T04:23:21.198+0000] {logging_mixin.py:188} INFO - Retrieved data for page 45
+[2024-05-10T04:23:23.699+0000] {logging_mixin.py:188} INFO - Retrieved data for page 46
+[2024-05-10T04:23:25.426+0000] {logging_mixin.py:188} INFO - Retrieved data for page 47
+[2024-05-10T04:23:28.094+0000] {logging_mixin.py:188} INFO - Retrieved data for page 48
+[2024-05-10T04:23:32.047+0000] {logging_mixin.py:188} INFO - Retrieved data for page 49
+[2024-05-10T04:23:34.134+0000] {logging_mixin.py:188} INFO - Retrieved data for page 50
+[2024-05-10T04:23:36.818+0000] {logging_mixin.py:188} INFO - Retrieved data for page 51
+[2024-05-10T04:23:38.590+0000] {logging_mixin.py:188} INFO - Retrieved data for page 52
+[2024-05-10T04:23:42.461+0000] {logging_mixin.py:188} INFO - Retrieved data for page 53
+[2024-05-10T04:23:44.316+0000] {logging_mixin.py:188} INFO - Retrieved data for page 54
+[2024-05-10T04:23:47.470+0000] {logging_mixin.py:188} INFO - Retrieved data for page 55
+[2024-05-10T04:23:49.275+0000] {logging_mixin.py:188} INFO - Retrieved data for page 56
+[2024-05-10T04:23:51.331+0000] {logging_mixin.py:188} INFO - Retrieved data for page 57
+[2024-05-10T04:23:54.762+0000] {logging_mixin.py:188} INFO - Retrieved data for page 58
+[2024-05-10T04:23:57.003+0000] {logging_mixin.py:188} INFO - Retrieved data for page 59
+[2024-05-10T04:23:59.415+0000] {logging_mixin.py:188} INFO - Retrieved data for page 60
+[2024-05-10T04:24:03.742+0000] {logging_mixin.py:188} INFO - Retrieved data for page 61
+[2024-05-10T04:24:07.552+0000] {logging_mixin.py:188} INFO - Retrieved data for page 62
+[2024-05-10T04:24:10.469+0000] {logging_mixin.py:188} INFO - Retrieved data for page 63
+[2024-05-10T04:24:12.473+0000] {logging_mixin.py:188} INFO - Retrieved data for page 64
+[2024-05-10T04:24:15.032+0000] {logging_mixin.py:188} INFO - Retrieved data for page 65
+[2024-05-10T04:24:17.049+0000] {logging_mixin.py:188} INFO - Retrieved data for page 66
+[2024-05-10T04:24:19.050+0000] {logging_mixin.py:188} INFO - Retrieved data for page 67
+[2024-05-10T04:24:21.238+0000] {logging_mixin.py:188} INFO - Retrieved data for page 68
+[2024-05-10T04:24:23.277+0000] {logging_mixin.py:188} INFO - Retrieved data for page 69
+[2024-05-10T04:24:25.335+0000] {logging_mixin.py:188} INFO - Retrieved data for page 70
+[2024-05-10T04:24:27.196+0000] {logging_mixin.py:188} INFO - Retrieved data for page 71
+[2024-05-10T04:24:29.807+0000] {logging_mixin.py:188} INFO - Retrieved data for page 72
+[2024-05-10T04:24:31.696+0000] {logging_mixin.py:188} INFO - Retrieved data for page 73
+[2024-05-10T04:24:33.403+0000] {logging_mixin.py:188} INFO - Retrieved data for page 74
+[2024-05-10T04:24:37.679+0000] {logging_mixin.py:188} INFO - Retrieved data for page 75
+[2024-05-10T04:24:39.452+0000] {logging_mixin.py:188} INFO - Retrieved data for page 76
+[2024-05-10T04:24:41.230+0000] {logging_mixin.py:188} INFO - Retrieved data for page 77
+[2024-05-10T04:24:44.350+0000] {logging_mixin.py:188} INFO - Retrieved data for page 78
+[2024-05-10T04:24:46.190+0000] {logging_mixin.py:188} INFO - Retrieved data for page 79
+[2024-05-10T04:24:50.743+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_0.json to Minio
+[2024-05-10T04:24:51.320+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_1.json to Minio
+[2024-05-10T04:24:52.286+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_2.json to Minio
+[2024-05-10T04:24:53.523+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_3.json to Minio
+[2024-05-10T04:24:57.972+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_4.json to Minio
+[2024-05-10T04:25:02.805+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_5.json to Minio
+[2024-05-10T04:25:03.692+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_6.json to Minio
+[2024-05-10T04:25:04.428+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_7.json to Minio
+[2024-05-10T04:25:05.327+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_8.json to Minio
+[2024-05-10T04:25:06.099+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_9.json to Minio
+[2024-05-10T04:25:07.002+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_10.json to Minio
+[2024-05-10T04:25:07.947+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_11.json to Minio
+[2024-05-10T04:25:09.023+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_12.json to Minio
+[2024-05-10T04:25:09.986+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_13.json to Minio
+[2024-05-10T04:25:10.673+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_14.json to Minio
+[2024-05-10T04:25:11.377+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_15.json to Minio
+[2024-05-10T04:25:13.619+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_16.json to Minio
+[2024-05-10T04:25:16.123+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_17.json to Minio
+[2024-05-10T04:25:16.758+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_18.json to Minio
+[2024-05-10T04:25:17.582+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_19.json to Minio
+[2024-05-10T04:25:18.487+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_20.json to Minio
+[2024-05-10T04:25:19.660+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_21.json to Minio
+[2024-05-10T04:25:20.307+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_22.json to Minio
+[2024-05-10T04:25:21.064+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_23.json to Minio
+[2024-05-10T04:25:21.736+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_24.json to Minio
+[2024-05-10T04:25:25.542+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_25.json to Minio
+[2024-05-10T04:25:26.663+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_26.json to Minio
+[2024-05-10T04:25:27.682+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_27.json to Minio
+[2024-05-10T04:25:28.453+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_28.json to Minio
+[2024-05-10T04:25:30.056+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_29.json to Minio
+[2024-05-10T04:25:32.909+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_30.json to Minio
+[2024-05-10T04:25:33.931+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_31.json to Minio
+[2024-05-10T04:25:35.690+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_32.json to Minio
+[2024-05-10T04:25:38.006+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_33.json to Minio
+[2024-05-10T04:25:40.072+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_34.json to Minio
+[2024-05-10T04:25:41.281+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_35.json to Minio
+[2024-05-10T04:25:43.732+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_36.json to Minio
+[2024-05-10T04:25:53.672+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_37.json to Minio
+[2024-05-10T04:25:55.275+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_38.json to Minio
+[2024-05-10T04:25:56.348+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_39.json to Minio
+[2024-05-10T04:26:06.076+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_40.json to Minio
+[2024-05-10T04:26:07.088+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_41.json to Minio
+[2024-05-10T04:26:07.760+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_42.json to Minio
+[2024-05-10T04:26:08.665+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_43.json to Minio
+[2024-05-10T04:26:09.805+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_44.json to Minio
+[2024-05-10T04:26:14.286+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_45.json to Minio
+[2024-05-10T04:26:14.825+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_46.json to Minio
+[2024-05-10T04:26:21.108+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_47.json to Minio
+[2024-05-10T04:26:31.554+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_48.json to Minio
+[2024-05-10T04:26:32.177+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_49.json to Minio
+[2024-05-10T04:26:32.953+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_50.json to Minio
+[2024-05-10T04:26:33.941+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_51.json to Minio
+[2024-05-10T04:27:49.748+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2024-05-10T04:27:49.748+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-10T04:27:49.750+0000] {process_utils.py:132} INFO - Sending 15 to group 14772. PIDs of all processes in the group: [14772]
+[2024-05-10T04:27:49.751+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 14772
+[2024-05-10T04:27:49.751+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-05-10T04:27:49.752+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T04:27:49.804+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=14772, status='terminated', exitcode=0, started='04:21:19') (14772) terminated with exit code 0

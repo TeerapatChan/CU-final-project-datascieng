@@ -1,0 +1,107 @@
+[2024-05-10T12:25:41.890+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T12:25:41.922+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:25:41.929+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:25:41.930+0000] {taskinstance.py:2306} INFO - Starting attempt 72 of 75
+[2024-05-10T12:25:41.941+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T12:25:41.948+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6308) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T12:25:41.949+0000] {standard_task_runner.py:63} INFO - Started process 6316 to run task
+[2024-05-10T12:25:41.948+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '464', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmplvp2z6x4']
+[2024-05-10T12:25:41.950+0000] {standard_task_runner.py:91} INFO - Job 464: Subtask divide_data
+[2024-05-10T12:25:41.960+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T12:25:41.985+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T12:25:42.051+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='72' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T12:25:42.052+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T12:25:42.236+0000] {logging_mixin.py:188} INFO - 0        Public health and international epidemiology f...
+1        Flexible Printed Active Antenna for Digital Te...
+2        Parametric study of hydrogen production via so...
+3        Superhydrophobic coating from fluoroalkylsilan...
+4        Electrochemical impedance based DNA sensor usi...
+                               ...                        
+21132    Usability evaluation of the university library...
+21133    Two decades' contribution of occupational medi...
+21134    Patients' Perceived Treatment Effectiveness in...
+21135    Counter intuitive channel allocation improveme...
+21507    Corrigendum to "A comparison of eugenol and me...
+Name: title, Length: 21137, dtype: object
+[2024-05-10T12:25:42.237+0000] {logging_mixin.py:188} INFO - 0        [ Stanford University School of Medicine ,  Ch...
+1                             [ Chulalongkorn University ]
+2                             [ Chulalongkorn University ]
+3        [ Hirosaki University ,  Chulalongkorn Univers...
+4        [ Chulalongkorn University ,  Thailand Nationa...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: affiliation_name, Length: 21137, dtype: object
+[2024-05-10T12:25:42.238+0000] {logging_mixin.py:188} INFO - 0        [ United States ,  Thailand ,  Thailand ,  Uni...
+1                                             [ Thailand ]
+2                                             [ Thailand ]
+3        [ Japan ,  Thailand ,  Thailand ,  Japan ,  Th...
+4        [ Thailand ,  Thailand ,  United States ,  Tha...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: affiliation_country, Length: 21137, dtype: object
+[2024-05-10T12:25:42.239+0000] {logging_mixin.py:188} INFO - 0            
+1            
+2            
+3            
+4            
+         ... 
+21132        
+21133        
+21134        
+21135        
+21507    2016
+Name: publication_year, Length: 21137, dtype: object
+[2024-05-10T12:25:42.240+0000] {logging_mixin.py:188} INFO - 0                                                       []
+1                                                       []
+2        [ Circulating fluidized bed ,  Computational f...
+3        [ Encapsulation ,  Fluoroalkylsilane ,  Natura...
+4        [ acpcPNA ,  Electrochemical impedance spectro...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: keywords, Length: 21137, dtype: object
+[2024-05-10T12:25:43.556+0000] {logging_mixin.py:188} INFO -                                                    title  ...                      keywords
+0      Public health and international epidemiology f...  ...                           NaN
+1      Flexible Printed Active Antenna for Digital Te...  ...                           NaN
+2      Parametric study of hydrogen production via so...  ...     Circulating fluidized bed
+2      Parametric study of hydrogen production via so...  ...  Computational fluid dynamics
+2      Parametric study of hydrogen production via so...  ...        Multiphase flow models
+...                                                  ...  ...                           ...
+21132  Usability evaluation of the university library...  ...                           NaN
+21133  Two decades' contribution of occupational medi...  ...                           NaN
+21134  Patients' Perceived Treatment Effectiveness in...  ...                           NaN
+21135  Counter intuitive channel allocation improveme...  ...                           NaN
+21507  Corrigendum to "A comparison of eugenol and me...  ...                           NaN
+
+[87945 rows x 3 columns]
+[2024-05-10T12:25:43.571+0000] {logging_mixin.py:188} INFO -                                                    title  ...                                           keywords
+2      Parametric study of hydrogen production via so...  ...                          Circulating fluidized bed
+2      Parametric study of hydrogen production via so...  ...                       Computational fluid dynamics
+2      Parametric study of hydrogen production via so...  ...                             Multiphase flow models
+2      Parametric study of hydrogen production via so...  ...                                              Riser
+2      Parametric study of hydrogen production via so...  ...          Sorption enhanced steam methane reforming
+...                                                  ...  ...                                                ...
+21116  Towards 5G cellular  Understanding 3D in build...  ...  5G   Architecture   Control  user plane   Femt...
+21117  Modeling of root reinforced soil slope under r...  ...  Centrifuge modeling   Landslides   Seepage ana...
+21118  Production of massoia lactone by Aureobasidium...  ...  Aureobasidium pullulans   fragrant biosurfacta...
+21119  Efficiencies of NF and RO membranes on pharmac...  ...  Carbamazepine   Membrane fouling   Nanofiltrat...
+21120  Two dimensional modeling of the oxidative coup...  ...  Fixed bed reactor   Gas hour space velocity (G...
+
+[84015 rows x 3 columns]
+[2024-05-10T12:25:43.577+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T12:25:43.577+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T12:25:43.585+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T122541, end_date=20240510T122543
+[2024-05-10T12:25:43.607+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T12:25:43.620+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T12:25:43.621+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

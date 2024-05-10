@@ -1,0 +1,44 @@
+[2024-05-10T03:43:00.673+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T03:43:00.695+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.clean_api_data manual__2024-05-10T03:42:18.815651+00:00 [queued]>
+[2024-05-10T03:43:00.704+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.clean_api_data manual__2024-05-10T03:42:18.815651+00:00 [queued]>
+[2024-05-10T03:43:00.705+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-10T03:43:00.716+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_api_data> on 2024-05-10 03:42:18.815651+00:00
+[2024-05-10T03:43:00.723+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=13144) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T03:43:00.724+0000] {standard_task_runner.py:63} INFO - Started process 13146 to run task
+[2024-05-10T03:43:00.723+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'clean_api_data', 'manual__2024-05-10T03:42:18.815651+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpjdojja4m']
+[2024-05-10T03:43:00.725+0000] {standard_task_runner.py:91} INFO - Job 216: Subtask clean_api_data
+[2024-05-10T03:43:00.737+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T03:43:00.764+0000] {task_command.py:426} INFO - Running <TaskInstance: ml_pipeline.clean_api_data manual__2024-05-10T03:42:18.815651+00:00 [running]> on host 3031e573f05c
+[2024-05-10T03:43:00.836+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='clean_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T03:42:18.815651+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T03:42:18.815651+00:00'
+[2024-05-10T03:43:00.838+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T03:43:00.899+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Shear capacity of high performance fiber reinf...  ...  [Fiber content, High performance fiber reinfor...
+1                   Mutation operators in BPMN model  ...        [BPMN, Mutation Operator, Mutation Testing]
+2  Characteristics and catalytic properties of Ni...  ...  [CO2 hydrogenation, Methanation, Nickel cataly...
+3  Flexible and stretchable electrode based on mu...  ...                                                 []
+4  Emerging chytrid fungal pathogen, batrachochyt...  ...  [Batrachochytrium dendrobatidis, Chytridiomyco...
+
+[5 rows x 5 columns]
+[2024-05-10T03:43:00.954+0000] {logging_mixin.py:188} INFO - 999
+[2024-05-10T03:43:00.954+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/data/api_data_csv/api_data.csvapi_data.csv
+[2024-05-10T03:43:00.992+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_csv/api_data.csv to Minio
+[2024-05-10T03:43:00.993+0000] {logging_mixin.py:188} INFO - <class 'pandas.core.frame.DataFrame'>
+[2024-05-10T03:43:00.993+0000] {python.py:237} INFO - Done. Returned value was:                                                  title  ...                                           keywords
+0    Shear capacity of high performance fiber reinf...  ...  [Fiber content, High performance fiber reinfor...
+1                     Mutation operators in BPMN model  ...        [BPMN, Mutation Operator, Mutation Testing]
+2    Characteristics and catalytic properties of Ni...  ...  [CO2 hydrogenation, Methanation, Nickel cataly...
+3    Flexible and stretchable electrode based on mu...  ...                                                 []
+4    Emerging chytrid fungal pathogen, batrachochyt...  ...  [Batrachochytrium dendrobatidis, Chytridiomyco...
+..                                                 ...  ...                                                ...
+994  Towards 5G cellular: Understanding 3D in-build...  ...  [5G, Architecture, Control-/user-plane, Femtoc...
+995  Modeling of root-reinforced soil slope under r...  ...  [Centrifuge modeling, Landslides, Seepage anal...
+996  Production of massoia lactone by Aureobasidium...  ...  [Aureobasidium pullulans, fragrant biosurfacta...
+997  Efficiencies of NF and RO membranes on pharmac...  ...  [Carbamazepine, Membrane fouling, Nanofiltrati...
+998  Two-dimensional modeling of the oxidative coup...  ...  [Fixed bed reactor, Gas hour space velocity (G...
+
+[999 rows x 5 columns]
+[2024-05-10T03:43:01.005+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T03:43:01.064+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=clean_api_data, run_id=manual__2024-05-10T03:42:18.815651+00:00, execution_date=20240510T034218, start_date=20240510T034300, end_date=20240510T034301
+[2024-05-10T03:43:01.099+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T03:43:01.118+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T03:43:01.120+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

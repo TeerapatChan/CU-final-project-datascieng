@@ -1,0 +1,89 @@
+[2024-05-10T07:34:24.208+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T07:34:24.228+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.concat_data manual__2024-05-10T07:28:51.301077+00:00 [queued]>
+[2024-05-10T07:34:24.235+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.concat_data manual__2024-05-10T07:28:51.301077+00:00 [queued]>
+[2024-05-10T07:34:24.236+0000] {taskinstance.py:2306} INFO - Starting attempt 7 of 10
+[2024-05-10T07:34:24.246+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): concat_data> on 2024-05-10 07:28:51.301077+00:00
+[2024-05-10T07:34:24.253+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=20699) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T07:34:24.252+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'concat_data', 'manual__2024-05-10T07:28:51.301077+00:00', '--job-id', '309', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpyozqsc5b']
+[2024-05-10T07:34:24.254+0000] {standard_task_runner.py:63} INFO - Started process 20701 to run task
+[2024-05-10T07:34:24.254+0000] {standard_task_runner.py:91} INFO - Job 309: Subtask concat_data
+[2024-05-10T07:34:24.264+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T07:34:24.290+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.concat_data manual__2024-05-10T07:28:51.301077+00:00 [running]> on host 3031e573f05c
+[2024-05-10T07:34:24.357+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='concat_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T07:28:51.301077+00:00' AIRFLOW_CTX_TRY_NUMBER='7' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T07:28:51.301077+00:00'
+[2024-05-10T07:34:24.358+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T07:34:24.650+0000] {logging_mixin.py:188} INFO - 21121
+[2024-05-10T07:34:24.661+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T07:34:24.662+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/concat_data.py", line 36, in concat_data
+    database = database.map(lambda x: re.sub(r'[^\u00-\u7F]+', '', x) if isinstance(x, str) else x)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10120, in map
+    return self.apply(infer).__finalize__(self, "map")
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10034, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/apply.py", line 837, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/apply.py", line 965, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/apply.py", line 981, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10118, in infer
+    return x._map_values(func, na_action=na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/algorithms.py", line 1814, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "lib.pyx", line 2926, in pandas._libs.lib.map_infer
+  File "/opt/airflow/dags/tasks/concat_data.py", line 36, in <lambda>
+    database = database.map(lambda x: re.sub(r'[^\u00-\u7F]+', '', x) if isinstance(x, str) else x)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/__init__.py", line 186, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/__init__.py", line 307, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/_parser.py", line 979, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/_parser.py", line 573, in _parse
+    code1 = _class_escape(source, this)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/re/_parser.py", line 332, in _class_escape
+    raise source.error("incomplete escape %s" % escape, len(escape))
+re.error: incomplete escape \u00 at position 2
+[2024-05-10T07:34:24.675+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=concat_data, run_id=manual__2024-05-10T07:28:51.301077+00:00, execution_date=20240510T072851, start_date=20240510T073424, end_date=20240510T073424
+[2024-05-10T07:34:24.685+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 309 for task concat_data (incomplete escape \u00 at position 2; 20701)
+[2024-05-10T07:34:24.709+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T07:34:24.726+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T07:34:24.728+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

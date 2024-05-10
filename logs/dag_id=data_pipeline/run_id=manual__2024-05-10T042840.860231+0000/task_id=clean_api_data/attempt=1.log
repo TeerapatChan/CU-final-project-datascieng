@@ -1,0 +1,34 @@
+[2024-05-10T04:55:09.419+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T04:55:09.444+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T04:28:40.860231+00:00 [queued]>
+[2024-05-10T04:55:09.452+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T04:28:40.860231+00:00 [queued]>
+[2024-05-10T04:55:09.453+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-10T04:55:09.464+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_api_data> on 2024-05-10 04:28:40.860231+00:00
+[2024-05-10T04:55:09.473+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=15895) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T04:55:09.472+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'clean_api_data', 'manual__2024-05-10T04:28:40.860231+00:00', '--job-id', '273', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmplp55_11_']
+[2024-05-10T04:55:09.474+0000] {standard_task_runner.py:63} INFO - Started process 15897 to run task
+[2024-05-10T04:55:09.474+0000] {standard_task_runner.py:91} INFO - Job 273: Subtask clean_api_data
+[2024-05-10T04:55:09.488+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T04:55:09.516+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T04:28:40.860231+00:00 [running]> on host 3031e573f05c
+[2024-05-10T04:55:09.596+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='clean_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T04:28:40.860231+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T04:28:40.860231+00:00'
+[2024-05-10T04:55:09.597+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T04:55:09.692+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/data/api_data_csv/api_data.csvapi_data.csv
+[2024-05-10T04:55:09.725+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_csv/api_data.csv to Minio
+[2024-05-10T04:55:09.725+0000] {python.py:237} INFO - Done. Returned value was:                                                  title  ...                                           keywords
+0    Sarcopenia and its individual criteria are ass...  ...  [gait speed, hand grip strength, hemodialysis,...
+1    Enhanced degradation of chitosan by applying p...  ...  [Chitooligosaccharide, Chitosan, Degradation, ...
+2                      Quantifying Economic Dependency  ...  [Age-specific consumption, Age-specific labour...
+3    Groundwater discharge and phosphorus dynamics ...  ...  [Flood pulse, Groundwater, Nutrients, Phosphor...
+4    Reversible adsorption of metalworking fluids (...  ...  [Cutting fluids, Metal organic frameworks, Met...
+..                                                 ...  ...                                                ...
+892  On the genus Armina (Gastropoda: Heterobranchi...  ...  [Armina semperi, Complex of species, Gulf of T...
+893  Characterization of PmSpӓtzle 1 from the black...  ...  [Antimicrobial proteins, Penaeus monodon, PmSp...
+894  Buccolingual inclination of the mandibular sec...  ...  [Anteroposterior skeletal pattern, Buccolingua...
+895  Linear–quadratic term structure models for neg...  ...  [Discrete time, Extended Kalman Filter, Linear...
+896  Influence of basis images and skull position o...  ...                                                 []
+
+[897 rows x 5 columns]
+[2024-05-10T04:55:09.740+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T04:55:09.799+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=clean_api_data, run_id=manual__2024-05-10T04:28:40.860231+00:00, execution_date=20240510T042840, start_date=20240510T045509, end_date=20240510T045509
+[2024-05-10T04:55:09.849+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T04:55:09.875+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T04:55:09.877+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

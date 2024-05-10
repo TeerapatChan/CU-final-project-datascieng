@@ -1,0 +1,105 @@
+[2024-05-10T12:17:21.468+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T12:17:21.491+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:17:21.497+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:17:21.498+0000] {taskinstance.py:2306} INFO - Starting attempt 61 of 64
+[2024-05-10T12:17:21.509+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T12:17:21.515+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5920) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T12:17:21.516+0000] {standard_task_runner.py:63} INFO - Started process 5922 to run task
+[2024-05-10T12:17:21.515+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '454', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpx3wv5d0o']
+[2024-05-10T12:17:21.517+0000] {standard_task_runner.py:91} INFO - Job 454: Subtask divide_data
+[2024-05-10T12:17:21.527+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T12:17:21.552+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T12:17:21.617+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='61' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T12:17:21.618+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T12:17:21.794+0000] {logging_mixin.py:188} INFO - 0        Public health and international epidemiology f...
+1        Flexible Printed Active Antenna for Digital Te...
+2        Parametric study of hydrogen production via so...
+3        Superhydrophobic coating from fluoroalkylsilan...
+4        Electrochemical impedance based DNA sensor usi...
+                               ...                        
+21132    Usability evaluation of the university library...
+21133    Two decades' contribution of occupational medi...
+21134    Patients' Perceived Treatment Effectiveness in...
+21135    Counter intuitive channel allocation improveme...
+21507    Corrigendum to "A comparison of eugenol and me...
+Name: title, Length: 21137, dtype: object
+[2024-05-10T12:17:21.796+0000] {logging_mixin.py:188} INFO - 0        [ Stanford University School of Medicine ,  Ch...
+1                             [ Chulalongkorn University ]
+2                             [ Chulalongkorn University ]
+3        [ Hirosaki University ,  Chulalongkorn Univers...
+4        [ Chulalongkorn University ,  Thailand Nationa...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: affiliation_name, Length: 21137, dtype: object
+[2024-05-10T12:17:21.796+0000] {logging_mixin.py:188} INFO - 0        [ United States ,  Thailand ,  Thailand ,  Uni...
+1                                             [ Thailand ]
+2                                             [ Thailand ]
+3        [ Japan ,  Thailand ,  Thailand ,  Japan ,  Th...
+4        [ Thailand ,  Thailand ,  United States ,  Tha...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: affiliation_country, Length: 21137, dtype: object
+[2024-05-10T12:17:21.797+0000] {logging_mixin.py:188} INFO - 0            
+1            
+2            
+3            
+4            
+         ... 
+21132        
+21133        
+21134        
+21135        
+21507    2016
+Name: publication_year, Length: 21137, dtype: object
+[2024-05-10T12:17:21.798+0000] {logging_mixin.py:188} INFO - 0                                                       []
+1                                                       []
+2        [ Circulating fluidized bed ,  Computational f...
+3        [ Encapsulation ,  Fluoroalkylsilane ,  Natura...
+4        [ acpcPNA ,  Electrochemical impedance spectro...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: keywords, Length: 21137, dtype: object
+[2024-05-10T12:17:21.801+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T12:17:21.801+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/divide_data.py", line 35, in divide_data
+    title_keywords_year(df, file_path_to_upload)
+  File "/opt/airflow/dags/tasks/divide_data.py", line 48, in title_keywords_year
+    list = df['keywords'].split(',')
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Series' object has no attribute 'split'. Did you mean: 'plot'?
+[2024-05-10T12:17:21.814+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T121721, end_date=20240510T121721
+[2024-05-10T12:17:21.822+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 454 for task divide_data ('Series' object has no attribute 'split'; 5922)
+[2024-05-10T12:17:21.850+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T12:17:21.866+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T12:17:21.868+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,44 @@
+[2024-05-09T17:25:46.822+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T17:25:46.848+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.get_api_data manual__2024-05-09T17:22:16.829625+00:00 [queued]>
+[2024-05-09T17:25:46.858+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.get_api_data manual__2024-05-09T17:22:16.829625+00:00 [queued]>
+[2024-05-09T17:25:46.859+0000] {taskinstance.py:2306} INFO - Starting attempt 9 of 12
+[2024-05-09T17:25:46.873+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_api_data> on 2024-05-09 17:22:16.829625+00:00
+[2024-05-09T17:25:46.880+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=564) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T17:25:46.881+0000] {standard_task_runner.py:63} INFO - Started process 566 to run task
+[2024-05-09T17:25:46.880+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'get_api_data', 'manual__2024-05-09T17:22:16.829625+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpkpxznlmq']
+[2024-05-09T17:25:46.882+0000] {standard_task_runner.py:91} INFO - Job 77: Subtask get_api_data
+[2024-05-09T17:25:46.895+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T17:25:46.927+0000] {task_command.py:426} INFO - Running <TaskInstance: ml_pipeline.get_api_data manual__2024-05-09T17:22:16.829625+00:00 [running]> on host 2e12adb076a9
+[2024-05-09T17:25:47.010+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='get_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T17:22:16.829625+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-09T17:22:16.829625+00:00'
+[2024-05-09T17:25:47.011+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T17:25:49.082+0000] {logging_mixin.py:188} INFO - Retrieved data for page 0
+[2024-05-09T17:25:49.083+0000] {logging_mixin.py:188} INFO - Retrieved DOIs
+[2024-05-09T17:25:49.644+0000] {logging_mixin.py:188} INFO - Retrieved data for DOI 0
+[2024-05-09T17:25:49.644+0000] {logging_mixin.py:188} INFO - /opt/***
+[2024-05-09T17:25:49.645+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T17:25:49.645+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/get_api_data.py", line 51, in get_api_data
+    with open(file_path, 'w') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'airflow_data/api_data_json/research_0.json'
+[2024-05-09T17:25:49.660+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=ml_pipeline, task_id=get_api_data, run_id=manual__2024-05-09T17:22:16.829625+00:00, execution_date=20240509T172216, start_date=20240509T172546, end_date=20240509T172549
+[2024-05-09T17:25:49.677+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 77 for task get_api_data ([Errno 2] No such file or directory: 'airflow_data/api_data_json/research_0.json'; 566)
+[2024-05-09T17:25:49.708+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-09T17:25:49.737+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T17:25:49.739+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

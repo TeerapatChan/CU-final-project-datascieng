@@ -1,0 +1,67 @@
+[2024-05-10T12:43:24.953+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T12:43:24.975+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.concat_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:43:24.982+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.concat_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:43:24.983+0000] {taskinstance.py:2306} INFO - Starting attempt 21 of 24
+[2024-05-10T12:43:24.994+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): concat_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T12:43:25.000+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=7438) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T12:43:25.001+0000] {standard_task_runner.py:63} INFO - Started process 7440 to run task
+[2024-05-10T12:43:25.000+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'concat_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '512', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpczy6_tot']
+[2024-05-10T12:43:25.002+0000] {standard_task_runner.py:91} INFO - Job 512: Subtask concat_data
+[2024-05-10T12:43:25.020+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T12:43:25.044+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.concat_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T12:43:25.334+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='concat_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='21' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T12:43:25.335+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T12:43:25.378+0000] {logging_mixin.py:188} INFO - 0      2017
+1      2017
+2      2017
+3      2016
+4      2016
+       ... 
+995    2017
+996    2017
+997    2017
+998    2017
+999    2017
+Name: publication_year, Length: 1000, dtype: object
+[2024-05-10T12:43:25.614+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Public health and international epidemiology f...  ...                                                 []
+1  Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2  Parametric study of hydrogen production via so...  ...  [ Circulating fluidized bed ,  Computational f...
+3  Superhydrophobic coating from fluoroalkylsilan...  ...  [ Encapsulation ,  Fluoroalkylsilane ,  Natura...
+4  Electrochemical impedance based DNA sensor usi...  ...  [ acpcPNA ,  Electrochemical impedance spectro...
+
+[5 rows x 5 columns]
+[2024-05-10T12:43:25.614+0000] {logging_mixin.py:188} INFO - 21137
+[2024-05-10T12:43:26.225+0000] {logging_mixin.py:188} INFO - 21137
+[2024-05-10T12:43:26.753+0000] {logging_mixin.py:188} INFO - Uploaded data/database.csv to Minio
+[2024-05-10T12:43:26.754+0000] {logging_mixin.py:188} INFO - 0         
+1         
+2         
+3         
+4         
+        ..
+21132     
+21133     
+21134     
+21135     
+21136     
+Name: publication_year, Length: 21137, dtype: object
+[2024-05-10T12:43:26.755+0000] {python.py:237} INFO - Done. Returned value was:                                                    title  ...                                           keywords
+0      Public health and international epidemiology f...  ...                                                 []
+1      Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2      Parametric study of hydrogen production via so...  ...  [ Circulating fluidized bed ,  Computational f...
+3      Superhydrophobic coating from fluoroalkylsilan...  ...  [ Encapsulation ,  Fluoroalkylsilane ,  Natura...
+4      Electrochemical impedance based DNA sensor usi...  ...  [ acpcPNA ,  Electrochemical impedance spectro...
+...                                                  ...  ...                                                ...
+21132  Usability evaluation of the university library...  ...                                                   
+21133  Two decades' contribution of occupational medi...  ...                                                   
+21134  Patients' Perceived Treatment Effectiveness in...  ...                                                   
+21135  Counter intuitive channel allocation improveme...  ...                                                   
+21136  Corrigendum to "A comparison of eugenol and me...  ...                                                   
+
+[21137 rows x 5 columns]
+[2024-05-10T12:43:26.762+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T12:43:27.452+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=concat_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T124324, end_date=20240510T124327
+[2024-05-10T12:43:27.502+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T12:43:27.520+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T12:43:27.522+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

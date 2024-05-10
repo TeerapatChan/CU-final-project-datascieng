@@ -1,0 +1,41 @@
+[2024-05-10T14:23:55.935+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T14:23:55.958+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:23:55.966+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:23:55.966+0000] {taskinstance.py:2306} INFO - Starting attempt 150 of 153
+[2024-05-10T14:23:55.977+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T14:23:55.983+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=11671) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T14:23:55.984+0000] {standard_task_runner.py:63} INFO - Started process 11673 to run task
+[2024-05-10T14:23:55.983+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '590', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmplh2uharu']
+[2024-05-10T14:23:55.985+0000] {standard_task_runner.py:91} INFO - Job 590: Subtask divide_data
+[2024-05-10T14:23:55.996+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T14:23:56.021+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T14:23:56.092+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='150' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T14:23:56.093+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T14:23:58.290+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Public health and international epidemiology f...  ...                                                 []
+1  Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2  Parametric study of hydrogen production via so...  ...  ['Circulating fluidized bed', 'Computational f...
+3  Superhydrophobic coating from fluoroalkylsilan...  ...  ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4  Electrochemical impedance based DNA sensor usi...  ...  ['acpcPNA', 'Electrochemical impedance spectro...
+
+[5 rows x 4 columns] 21121
+[2024-05-10T14:23:58.295+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Public health and international epidemiology f...  ...                                                 []
+1  Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2  Parametric study of hydrogen production via so...  ...  ['Circulating fluidized bed', 'Computational f...
+3  Superhydrophobic coating from fluoroalkylsilan...  ...  ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4  Electrochemical impedance based DNA sensor usi...  ...  ['acpcPNA', 'Electrochemical impedance spectro...
+
+[5 rows x 4 columns] 21121
+[2024-05-10T14:23:58.383+0000] {logging_mixin.py:188} INFO - 0                         ['Chulalongkorn University']
+1    ['Al Farabi Kazakh National University', 'Chul...
+2                         ['Chulalongkorn University']
+3    ['Chulalongkorn University', 'Rangsit Universi...
+4                         ['Chulalongkorn University']
+Name: affiliation_name, dtype: object
+[2024-05-10T14:23:58.388+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T14:23:58.389+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T14:23:58.397+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T142355, end_date=20240510T142358
+[2024-05-10T14:23:58.445+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T14:23:58.458+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T14:23:58.461+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

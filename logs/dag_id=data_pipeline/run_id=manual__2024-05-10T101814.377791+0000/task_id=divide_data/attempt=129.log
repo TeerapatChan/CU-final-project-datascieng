@@ -1,0 +1,67 @@
+[2024-05-10T13:46:15.496+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T13:46:15.520+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T13:46:15.528+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T13:46:15.534+0000] {taskinstance.py:2306} INFO - Starting attempt 129 of 132
+[2024-05-10T13:46:15.545+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T13:46:15.551+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=10075) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T13:46:15.551+0000] {standard_task_runner.py:63} INFO - Started process 10077 to run task
+[2024-05-10T13:46:15.551+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '558', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp17lpwmpk']
+[2024-05-10T13:46:15.552+0000] {standard_task_runner.py:91} INFO - Job 558: Subtask divide_data
+[2024-05-10T13:46:15.568+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T13:46:15.684+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T13:46:15.777+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='129' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T13:46:15.778+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T13:46:20.207+0000] {logging_mixin.py:188} INFO - 0        ['Stanford University School of Medicine', 'Ch...
+1                             ['Chulalongkorn University']
+2                             ['Chulalongkorn University']
+3        ['Hirosaki University', 'Chulalongkorn Univers...
+4        ['Chulalongkorn University', 'Thailand Nationa...
+                               ...                        
+22114                                                   []
+22116                                                   []
+22117                                                   []
+22118                                                   []
+22120                                                   []
+Name: affiliation_name, Length: 21752, dtype: object
+[2024-05-10T13:46:20.208+0000] {logging_mixin.py:188} INFO - 0        ['United States', 'Thailand', 'Thailand', 'Uni...
+1                                             ['Thailand']
+2                                             ['Thailand']
+3        ['Japan', 'Thailand', 'Thailand', 'Japan', 'Th...
+4        ['Thailand', 'Thailand', 'United States', 'Tha...
+                               ...                        
+22114                                                   []
+22116                                                   []
+22117                                                   []
+22118                                                   []
+22120                                                   []
+Name: affiliation_country, Length: 21752, dtype: object
+[2024-05-10T13:46:20.306+0000] {logging_mixin.py:188} INFO - 0        'Stanford University School of Medicine'
+0                      'Chulalongkorn University'
+0             'Bumrungrad International Hospital'
+0                           'Stanford Healthcare'
+0                           'Stanford University'
+                           ...                   
+22114                                         NaN
+22116                                         NaN
+22117                                         NaN
+22118                                         NaN
+22120                                         NaN
+Name: affiliation_name, Length: 230310, dtype: object
+[2024-05-10T13:46:20.307+0000] {logging_mixin.py:188} INFO - 0        'United States'
+0             'Thailand'
+0             'Thailand'
+0        'United States'
+0        'United States'
+              ...       
+22114                NaN
+22116                NaN
+22117                NaN
+22118                NaN
+22120                NaN
+Name: affiliation_country, Length: 204184, dtype: object
+[2024-05-10T13:46:20.334+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T13:46:20.335+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T13:46:20.341+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T134615, end_date=20240510T134620
+[2024-05-10T13:46:20.421+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T13:46:20.434+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T13:46:20.435+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

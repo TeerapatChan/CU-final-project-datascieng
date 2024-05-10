@@ -1,0 +1,33 @@
+[2024-05-10T14:00:09.402+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T14:00:09.426+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:00:09.434+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:00:09.434+0000] {taskinstance.py:2306} INFO - Starting attempt 136 of 139
+[2024-05-10T14:00:09.444+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T14:00:09.450+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=10620) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T14:00:09.451+0000] {standard_task_runner.py:63} INFO - Started process 10622 to run task
+[2024-05-10T14:00:09.450+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '565', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpo5qkgv7h']
+[2024-05-10T14:00:09.452+0000] {standard_task_runner.py:91} INFO - Job 565: Subtask divide_data
+[2024-05-10T14:00:09.462+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T14:00:09.487+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T14:00:09.553+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='136' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T14:00:09.554+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T14:00:14.244+0000] {logging_mixin.py:188} INFO -                                                     title  ... keywords
+0       Public health and international epidemiology f...  ...       []
+1       Public health and international epidemiology f...  ...       []
+2       Public health and international epidemiology f...  ...       []
+3       Public health and international epidemiology f...  ...       []
+4       Public health and international epidemiology f...  ...       []
+...                                                   ...  ...      ...
+230305  Study of the liquid film forming apparatus as ...  ...       []
+230306  Towards 5G cellular  Understanding 3D in build...  ...       []
+230307  Modeling of root reinforced soil slope under r...  ...       []
+230308  Production of massoia lactone by Aureobasidium...  ...       []
+230309  Two dimensional modeling of the oxidative coup...  ...       []
+
+[230310 rows x 4 columns]
+[2024-05-10T14:00:14.267+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T14:00:14.268+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T14:00:14.274+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T140009, end_date=20240510T140014
+[2024-05-10T14:00:14.319+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T14:00:14.332+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T14:00:14.334+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

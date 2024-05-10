@@ -1,0 +1,77 @@
+[2024-05-10T13:47:29.336+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T13:47:29.360+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T13:47:29.367+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T13:47:29.368+0000] {taskinstance.py:2306} INFO - Starting attempt 130 of 133
+[2024-05-10T13:47:29.378+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T13:47:29.383+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=10128) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T13:47:29.384+0000] {standard_task_runner.py:63} INFO - Started process 10130 to run task
+[2024-05-10T13:47:29.384+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '559', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpwxxlg7my']
+[2024-05-10T13:47:29.386+0000] {standard_task_runner.py:91} INFO - Job 559: Subtask divide_data
+[2024-05-10T13:47:29.396+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T13:47:29.421+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T13:47:29.492+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='130' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T13:47:29.494+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T13:47:34.212+0000] {logging_mixin.py:188} INFO - 0        'Stanford University School of Medicine'
+0                      'Chulalongkorn University'
+0             'Bumrungrad International Hospital'
+0                           'Stanford Healthcare'
+0                           'Stanford University'
+                           ...                   
+22114                                         NaN
+22116                                         NaN
+22117                                         NaN
+22118                                         NaN
+22120                                         NaN
+Name: affiliation_name, Length: 230310, dtype: object
+[2024-05-10T13:47:34.213+0000] {logging_mixin.py:188} INFO - 0        'United States'
+0             'Thailand'
+0             'Thailand'
+0        'United States'
+0        'United States'
+              ...       
+22114                NaN
+22116                NaN
+22117                NaN
+22118                NaN
+22120                NaN
+Name: affiliation_country, Length: 204184, dtype: object
+[2024-05-10T13:47:34.222+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T13:47:34.223+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/divide_data.py", line 36, in divide_data
+    title_affiliation(df, file_path_to_upload)
+  File "/opt/airflow/dags/tasks/divide_data.py", line 97, in title_affiliation
+    new_df = pd.DataFrame({
+             ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 733, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 677, in _extract_index
+    raise ValueError("All arrays must be of the same length")
+ValueError: All arrays must be of the same length
+[2024-05-10T13:47:34.233+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T134729, end_date=20240510T134734
+[2024-05-10T13:47:34.250+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 559 for task divide_data (All arrays must be of the same length; 10130)
+[2024-05-10T13:47:34.293+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T13:47:34.312+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T13:47:34.315+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

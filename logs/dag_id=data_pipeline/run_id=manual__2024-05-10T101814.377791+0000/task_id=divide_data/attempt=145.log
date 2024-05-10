@@ -1,0 +1,43 @@
+[2024-05-10T14:18:23.546+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T14:18:23.569+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:18:23.576+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:18:23.577+0000] {taskinstance.py:2306} INFO - Starting attempt 145 of 148
+[2024-05-10T14:18:23.587+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T14:18:23.593+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=11361) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T14:18:23.594+0000] {standard_task_runner.py:63} INFO - Started process 11363 to run task
+[2024-05-10T14:18:23.593+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '577', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpe_6g830k']
+[2024-05-10T14:18:23.595+0000] {standard_task_runner.py:91} INFO - Job 577: Subtask divide_data
+[2024-05-10T14:18:23.605+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T14:18:23.629+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T14:18:23.695+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='145' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T14:18:23.696+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T14:18:25.877+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Public health and international epidemiology f...  ...                                                 []
+1  Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2  Parametric study of hydrogen production via so...  ...  ['Circulating fluidized bed', 'Computational f...
+3  Superhydrophobic coating from fluoroalkylsilan...  ...  ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4  Electrochemical impedance based DNA sensor usi...  ...  ['acpcPNA', 'Electrochemical impedance spectro...
+
+[5 rows x 4 columns] 21121
+[2024-05-10T14:18:25.882+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Public health and international epidemiology f...  ...                                                 []
+1  Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2  Parametric study of hydrogen production via so...  ...  ['Circulating fluidized bed', 'Computational f...
+3  Superhydrophobic coating from fluoroalkylsilan...  ...  ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4  Electrochemical impedance based DNA sensor usi...  ...  ['acpcPNA', 'Electrochemical impedance spectro...
+
+[5 rows x 4 columns] 21121
+[2024-05-10T14:18:25.895+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Public health and international epidemiology f...  ...                                                 []
+1  Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2  Parametric study of hydrogen production via so...  ...  ['Circulating fluidized bed', 'Computational f...
+3  Superhydrophobic coating from fluoroalkylsilan...  ...  ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4  Electrochemical impedance based DNA sensor usi...  ...  ['acpcPNA', 'Electrochemical impedance spectro...
+
+[5 rows x 4 columns] 21121
+[2024-05-10T14:18:25.899+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T14:18:25.900+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T14:18:25.907+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T141823, end_date=20240510T141825
+[2024-05-10T14:18:25.935+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T14:18:25.948+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T14:18:25.951+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

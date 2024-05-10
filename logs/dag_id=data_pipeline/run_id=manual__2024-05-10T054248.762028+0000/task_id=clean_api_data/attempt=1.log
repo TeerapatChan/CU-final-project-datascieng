@@ -1,0 +1,34 @@
+[2024-05-10T05:54:22.371+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T05:54:22.392+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T05:42:48.762028+00:00 [queued]>
+[2024-05-10T05:54:22.398+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T05:42:48.762028+00:00 [queued]>
+[2024-05-10T05:54:22.399+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-10T05:54:22.409+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_api_data> on 2024-05-10 05:42:48.762028+00:00
+[2024-05-10T05:54:22.415+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=17175) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T05:54:22.416+0000] {standard_task_runner.py:63} INFO - Started process 17183 to run task
+[2024-05-10T05:54:22.415+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'clean_api_data', 'manual__2024-05-10T05:42:48.762028+00:00', '--job-id', '287', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpayppntxv']
+[2024-05-10T05:54:22.417+0000] {standard_task_runner.py:91} INFO - Job 287: Subtask clean_api_data
+[2024-05-10T05:54:22.427+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T05:54:22.452+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T05:42:48.762028+00:00 [running]> on host 3031e573f05c
+[2024-05-10T05:54:22.518+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='clean_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T05:42:48.762028+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T05:42:48.762028+00:00'
+[2024-05-10T05:54:22.519+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T05:54:22.620+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/data/api_data_csv/api_data.csvapi_data.csv
+[2024-05-10T05:54:22.651+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_csv/api_data.csv to Minio
+[2024-05-10T05:54:22.652+0000] {python.py:237} INFO - Done. Returned value was:                                                  title  ...                                           keywords
+0    Quantitative demonstration of the efficacy of ...  ...  [Apomorphine, Getting out of bed, Nocturnal ak...
+1    Understanding the role of the Parkinson's dise...  ...  [Apomorphine, Multidisciplinary team, Parkinso...
+2    Microshear bond strength to dentin of self-adh...  ...  [microshear bond strength, self-adhesive flowa...
+3    Bridging the gap between clinicians and system...  ...  [Biomedical research, Cancers, Network biology...
+4    Phase diagram and thermal expansion measuremen...  ...         [Hidden order, Thermal expansion, URu2Si2]
+..                                                 ...  ...                                                ...
+995  Towards 5G cellular: Understanding 3D in-build...  ...  [5G, Architecture, Control-/user-plane, Femtoc...
+996  Modeling of root-reinforced soil slope under r...  ...  [Centrifuge modeling, Landslides, Seepage anal...
+997  Production of massoia lactone by Aureobasidium...  ...  [Aureobasidium pullulans, fragrant biosurfacta...
+998  Efficiencies of NF and RO membranes on pharmac...  ...  [Carbamazepine, Membrane fouling, Nanofiltrati...
+999  Two-dimensional modeling of the oxidative coup...  ...  [Fixed bed reactor, Gas hour space velocity (G...
+
+[1000 rows x 5 columns]
+[2024-05-10T05:54:22.664+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T05:54:22.720+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=clean_api_data, run_id=manual__2024-05-10T05:42:48.762028+00:00, execution_date=20240510T054248, start_date=20240510T055422, end_date=20240510T055422
+[2024-05-10T05:54:22.751+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T05:54:22.769+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T05:54:22.771+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

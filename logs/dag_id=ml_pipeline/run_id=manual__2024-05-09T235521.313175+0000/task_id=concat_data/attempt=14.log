@@ -1,0 +1,114 @@
+[2024-05-10T03:10:14.050+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T03:10:14.073+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.concat_data manual__2024-05-09T23:55:21.313175+00:00 [queued]>
+[2024-05-10T03:10:14.080+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.concat_data manual__2024-05-09T23:55:21.313175+00:00 [queued]>
+[2024-05-10T03:10:14.081+0000] {taskinstance.py:2306} INFO - Starting attempt 14 of 17
+[2024-05-10T03:10:14.095+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): concat_data> on 2024-05-09 23:55:21.313175+00:00
+[2024-05-10T03:10:14.101+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=11856) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T03:10:14.101+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'concat_data', 'manual__2024-05-09T23:55:21.313175+00:00', '--job-id', '199', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp1i9r_ksf']
+[2024-05-10T03:10:14.103+0000] {standard_task_runner.py:63} INFO - Started process 11858 to run task
+[2024-05-10T03:10:14.103+0000] {standard_task_runner.py:91} INFO - Job 199: Subtask concat_data
+[2024-05-10T03:10:14.115+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T03:10:14.145+0000] {task_command.py:426} INFO - Running <TaskInstance: ml_pipeline.concat_data manual__2024-05-09T23:55:21.313175+00:00 [running]> on host 3031e573f05c
+[2024-05-10T03:10:14.247+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='concat_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T23:55:21.313175+00:00' AIRFLOW_CTX_TRY_NUMBER='14' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-09T23:55:21.313175+00:00'
+[2024-05-10T03:10:14.248+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T03:10:14.331+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Shear capacity of high performance fiber reinf...  ...  [Fiber content, High performance fiber reinfor...
+1                   Mutation operators in BPMN model  ...        [BPMN, Mutation Operator, Mutation Testing]
+2  A variable neighbourhood search approach for c...  ...  [2-opt, cyclic transfer algorithm, lambda-inte...
+3  Flexible and stretchable electrode based on mu...  ...                                                 []
+4  Determination of setback distances for on-land...  ...  [Petroleum exploration, Seismic reflection sur...
+
+[5 rows x 5 columns]
+[2024-05-10T03:10:15.576+0000] {logging_mixin.py:188} INFO - Uploaded data/database.csv to Minio
+[2024-05-10T03:10:15.577+0000] {logging_mixin.py:188} INFO - <class 'pandas.core.frame.DataFrame'>
+[2024-05-10T03:10:15.578+0000] {python.py:237} INFO - Done. Returned value was:                                                    title  ...                                           keywords
+0      Public health and international epidemiology f...  ...                                                 []
+1      Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2      Parametric study of hydrogen production via so...  ...  ['Circulating fluidized bed', 'Computational f...
+3      Superhydrophobic coating from fluoroalkylsilan...  ...  ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4      Electrochemical impedance-based DNA sensor usi...  ...  ['acpcPNA', 'Electrochemical impedance spectro...
+...                                                  ...  ...                                                ...
+26325  Towards 5G cellular: Understanding 3D in-build...  ...  [5G, Architecture, Control-/user-plane, Femtoc...
+26326  Modeling of root-reinforced soil slope under r...  ...  [Centrifuge modeling, Landslides, Seepage anal...
+26327  Production of massoia lactone by Aureobasidium...  ...  [Aureobasidium pullulans, fragrant biosurfacta...
+26328  Efficiencies of NF and RO membranes on pharmac...  ...  [Carbamazepine, Membrane fouling, Nanofiltrati...
+26329  Two-dimensional modeling of the oxidative coup...  ...  [Fixed bed reactor, Gas hour space velocity (G...
+
+[26330 rows x 5 columns]
+[2024-05-10T03:10:15.595+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T03:10:15.625+0000] {xcom.py:675} ERROR - Object of type DataFrame is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2024-05-10T03:10:15.626+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 91, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 148, in serialize
+    data, serialized_classname, version, is_serialized = _serializers[qn].serialize(o)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4525, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 624, in dataframe_to_arrays
+    arrays[i] = maybe_fut.result()
+                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 598, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 592, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 345, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 85, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 91, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'numpy.ndarray' object", 'Conversion failed for column affiliation_name with type object')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 486, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3197, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 246, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 673, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 104, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 93, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+[2024-05-10T03:10:15.636+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=ml_pipeline, task_id=concat_data, run_id=manual__2024-05-09T23:55:21.313175+00:00, execution_date=20240509T235521, start_date=20240510T031014, end_date=20240510T031015
+[2024-05-10T03:10:15.649+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 199 for task concat_data (Object of type DataFrame is not JSON serializable; 11858)
+[2024-05-10T03:10:15.689+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T03:10:15.713+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T03:10:15.715+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

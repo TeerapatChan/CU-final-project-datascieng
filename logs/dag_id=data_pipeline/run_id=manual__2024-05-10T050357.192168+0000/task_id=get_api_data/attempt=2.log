@@ -1,0 +1,250 @@
+[2024-05-10T05:30:03.029+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T05:30:03.068+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.get_api_data manual__2024-05-10T05:03:57.192168+00:00 [queued]>
+[2024-05-10T05:30:03.079+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.get_api_data manual__2024-05-10T05:03:57.192168+00:00 [queued]>
+[2024-05-10T05:30:03.080+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 5
+[2024-05-10T05:30:03.097+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_api_data> on 2024-05-10 05:03:57.192168+00:00
+[2024-05-10T05:30:03.106+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=16334) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T05:30:03.108+0000] {standard_task_runner.py:63} INFO - Started process 16336 to run task
+[2024-05-10T05:30:03.107+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'get_api_data', 'manual__2024-05-10T05:03:57.192168+00:00', '--job-id', '279', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmprz3w_kd5']
+[2024-05-10T05:30:03.110+0000] {standard_task_runner.py:91} INFO - Job 279: Subtask get_api_data
+[2024-05-10T05:30:03.126+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T05:30:03.166+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.get_api_data manual__2024-05-10T05:03:57.192168+00:00 [running]> on host 3031e573f05c
+[2024-05-10T05:30:03.277+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='get_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T05:03:57.192168+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T05:03:57.192168+00:00'
+[2024-05-10T05:30:03.278+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T05:30:07.076+0000] {logging_mixin.py:188} INFO - Retrieved data for page 80
+[2024-05-10T05:30:09.821+0000] {logging_mixin.py:188} INFO - Retrieved data for page 81
+[2024-05-10T05:30:11.506+0000] {logging_mixin.py:188} INFO - Retrieved data for page 82
+[2024-05-10T05:30:14.428+0000] {logging_mixin.py:188} INFO - Retrieved data for page 83
+[2024-05-10T05:30:16.408+0000] {logging_mixin.py:188} INFO - Retrieved data for page 84
+[2024-05-10T05:30:18.082+0000] {logging_mixin.py:188} INFO - Retrieved data for page 85
+[2024-05-10T05:30:20.155+0000] {logging_mixin.py:188} INFO - Retrieved data for page 86
+[2024-05-10T05:30:21.928+0000] {logging_mixin.py:188} INFO - Retrieved data for page 87
+[2024-05-10T05:30:23.742+0000] {logging_mixin.py:188} INFO - Retrieved data for page 88
+[2024-05-10T05:30:26.687+0000] {logging_mixin.py:188} INFO - Retrieved data for page 89
+[2024-05-10T05:30:29.459+0000] {logging_mixin.py:188} INFO - Retrieved data for page 90
+[2024-05-10T05:30:31.320+0000] {logging_mixin.py:188} INFO - Retrieved data for page 91
+[2024-05-10T05:30:33.482+0000] {logging_mixin.py:188} INFO - Retrieved data for page 92
+[2024-05-10T05:30:35.311+0000] {logging_mixin.py:188} INFO - Retrieved data for page 93
+[2024-05-10T05:30:38.732+0000] {logging_mixin.py:188} INFO - Retrieved data for page 94
+[2024-05-10T05:30:40.543+0000] {logging_mixin.py:188} INFO - Retrieved data for page 95
+[2024-05-10T05:30:42.276+0000] {logging_mixin.py:188} INFO - Retrieved data for page 96
+[2024-05-10T05:30:44.045+0000] {logging_mixin.py:188} INFO - Retrieved data for page 97
+[2024-05-10T05:30:46.156+0000] {logging_mixin.py:188} INFO - Retrieved data for page 98
+[2024-05-10T05:30:49.078+0000] {logging_mixin.py:188} INFO - Retrieved data for page 99
+[2024-05-10T05:30:51.596+0000] {logging_mixin.py:188} INFO - Retrieved data for page 100
+[2024-05-10T05:30:53.620+0000] {logging_mixin.py:188} INFO - Retrieved data for page 101
+[2024-05-10T05:30:55.471+0000] {logging_mixin.py:188} INFO - Retrieved data for page 102
+[2024-05-10T05:30:57.211+0000] {logging_mixin.py:188} INFO - Retrieved data for page 103
+[2024-05-10T05:30:58.910+0000] {logging_mixin.py:188} INFO - Retrieved data for page 104
+[2024-05-10T05:31:00.935+0000] {logging_mixin.py:188} INFO - Retrieved data for page 105
+[2024-05-10T05:31:02.899+0000] {logging_mixin.py:188} INFO - Retrieved data for page 106
+[2024-05-10T05:31:05.107+0000] {logging_mixin.py:188} INFO - Retrieved data for page 107
+[2024-05-10T05:31:06.952+0000] {logging_mixin.py:188} INFO - Retrieved data for page 108
+[2024-05-10T05:31:08.575+0000] {logging_mixin.py:188} INFO - Retrieved data for page 109
+[2024-05-10T05:31:10.355+0000] {logging_mixin.py:188} INFO - Retrieved data for page 110
+[2024-05-10T05:31:12.518+0000] {logging_mixin.py:188} INFO - Retrieved data for page 111
+[2024-05-10T05:31:15.510+0000] {logging_mixin.py:188} INFO - Retrieved data for page 112
+[2024-05-10T05:31:18.026+0000] {logging_mixin.py:188} INFO - Retrieved data for page 113
+[2024-05-10T05:31:19.756+0000] {logging_mixin.py:188} INFO - Retrieved data for page 114
+[2024-05-10T05:31:22.395+0000] {logging_mixin.py:188} INFO - Retrieved data for page 115
+[2024-05-10T05:31:26.693+0000] {logging_mixin.py:188} INFO - Retrieved data for page 116
+[2024-05-10T05:31:28.314+0000] {logging_mixin.py:188} INFO - Retrieved data for page 117
+[2024-05-10T05:31:30.901+0000] {logging_mixin.py:188} INFO - Retrieved data for page 118
+[2024-05-10T05:31:32.782+0000] {logging_mixin.py:188} INFO - Retrieved data for page 119
+[2024-05-10T05:31:33.866+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_0.json to Minio
+[2024-05-10T05:31:34.934+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_1.json to Minio
+[2024-05-10T05:31:36.001+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_2.json to Minio
+[2024-05-10T05:31:36.994+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_3.json to Minio
+[2024-05-10T05:31:37.709+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_4.json to Minio
+[2024-05-10T05:31:38.335+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_5.json to Minio
+[2024-05-10T05:31:39.073+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_6.json to Minio
+[2024-05-10T05:31:39.901+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_7.json to Minio
+[2024-05-10T05:31:40.598+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_8.json to Minio
+[2024-05-10T05:31:41.627+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_9.json to Minio
+[2024-05-10T05:31:42.232+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_10.json to Minio
+[2024-05-10T05:31:42.863+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_11.json to Minio
+[2024-05-10T05:31:43.606+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_12.json to Minio
+[2024-05-10T05:31:44.364+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_13.json to Minio
+[2024-05-10T05:31:45.078+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_14.json to Minio
+[2024-05-10T05:31:46.109+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_15.json to Minio
+[2024-05-10T05:31:46.783+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_16.json to Minio
+[2024-05-10T05:31:47.417+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_17.json to Minio
+[2024-05-10T05:31:48.001+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_18.json to Minio
+[2024-05-10T05:31:48.709+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_19.json to Minio
+[2024-05-10T05:31:49.433+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_20.json to Minio
+[2024-05-10T05:31:50.119+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_21.json to Minio
+[2024-05-10T05:31:50.871+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_22.json to Minio
+[2024-05-10T05:31:51.505+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_23.json to Minio
+[2024-05-10T05:31:52.090+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_24.json to Minio
+[2024-05-10T05:31:52.696+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_25.json to Minio
+[2024-05-10T05:31:53.390+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_26.json to Minio
+[2024-05-10T05:31:54.044+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_27.json to Minio
+[2024-05-10T05:31:54.806+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_28.json to Minio
+[2024-05-10T05:31:55.976+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_29.json to Minio
+[2024-05-10T05:31:56.630+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_30.json to Minio
+[2024-05-10T05:31:57.273+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_31.json to Minio
+[2024-05-10T05:31:57.921+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_32.json to Minio
+[2024-05-10T05:31:58.559+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_33.json to Minio
+[2024-05-10T05:31:59.236+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_34.json to Minio
+[2024-05-10T05:32:00.097+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_35.json to Minio
+[2024-05-10T05:32:00.788+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_36.json to Minio
+[2024-05-10T05:32:01.423+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_37.json to Minio
+[2024-05-10T05:32:02.094+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_38.json to Minio
+[2024-05-10T05:32:02.801+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_39.json to Minio
+[2024-05-10T05:32:03.698+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_40.json to Minio
+[2024-05-10T05:32:04.351+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_41.json to Minio
+[2024-05-10T05:32:05.043+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_42.json to Minio
+[2024-05-10T05:32:05.871+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_43.json to Minio
+[2024-05-10T05:32:06.671+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_44.json to Minio
+[2024-05-10T05:32:07.535+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_45.json to Minio
+[2024-05-10T05:32:08.162+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_46.json to Minio
+[2024-05-10T05:32:08.919+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_47.json to Minio
+[2024-05-10T05:32:09.615+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_48.json to Minio
+[2024-05-10T05:32:10.340+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_49.json to Minio
+[2024-05-10T05:32:10.960+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_50.json to Minio
+[2024-05-10T05:32:12.027+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_51.json to Minio
+[2024-05-10T05:32:12.673+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_52.json to Minio
+[2024-05-10T05:32:13.285+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_53.json to Minio
+[2024-05-10T05:32:13.861+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_54.json to Minio
+[2024-05-10T05:32:14.737+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_55.json to Minio
+[2024-05-10T05:32:15.674+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_56.json to Minio
+[2024-05-10T05:32:16.659+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_57.json to Minio
+[2024-05-10T05:32:17.536+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_58.json to Minio
+[2024-05-10T05:32:18.342+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_59.json to Minio
+[2024-05-10T05:32:19.036+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_60.json to Minio
+[2024-05-10T05:32:19.783+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_61.json to Minio
+[2024-05-10T05:32:20.609+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_62.json to Minio
+[2024-05-10T05:32:21.276+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_63.json to Minio
+[2024-05-10T05:32:21.886+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_64.json to Minio
+[2024-05-10T05:32:22.555+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_65.json to Minio
+[2024-05-10T05:32:23.255+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_66.json to Minio
+[2024-05-10T05:32:24.352+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_67.json to Minio
+[2024-05-10T05:32:25.585+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_68.json to Minio
+[2024-05-10T05:32:26.347+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_69.json to Minio
+[2024-05-10T05:32:27.013+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_70.json to Minio
+[2024-05-10T05:32:27.870+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_71.json to Minio
+[2024-05-10T05:32:28.557+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_72.json to Minio
+[2024-05-10T05:32:29.314+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_73.json to Minio
+[2024-05-10T05:32:30.135+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_74.json to Minio
+[2024-05-10T05:32:30.850+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_75.json to Minio
+[2024-05-10T05:32:31.951+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_76.json to Minio
+[2024-05-10T05:32:33.314+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_77.json to Minio
+[2024-05-10T05:32:33.934+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_78.json to Minio
+[2024-05-10T05:32:34.849+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_79.json to Minio
+[2024-05-10T05:32:35.788+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_80.json to Minio
+[2024-05-10T05:32:36.571+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_81.json to Minio
+[2024-05-10T05:32:37.712+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_82.json to Minio
+[2024-05-10T05:32:38.846+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_83.json to Minio
+[2024-05-10T05:32:39.673+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_84.json to Minio
+[2024-05-10T05:32:40.491+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_85.json to Minio
+[2024-05-10T05:32:41.175+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_86.json to Minio
+[2024-05-10T05:32:41.809+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_87.json to Minio
+[2024-05-10T05:32:42.435+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_88.json to Minio
+[2024-05-10T05:32:43.231+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_89.json to Minio
+[2024-05-10T05:32:43.946+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_90.json to Minio
+[2024-05-10T05:32:44.617+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_91.json to Minio
+[2024-05-10T05:32:45.447+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_92.json to Minio
+[2024-05-10T05:32:46.172+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_93.json to Minio
+[2024-05-10T05:32:47.059+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_94.json to Minio
+[2024-05-10T05:32:47.815+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_95.json to Minio
+[2024-05-10T05:32:48.466+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_96.json to Minio
+[2024-05-10T05:32:49.211+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_97.json to Minio
+[2024-05-10T05:32:49.926+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_98.json to Minio
+[2024-05-10T05:32:50.708+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_99.json to Minio
+[2024-05-10T05:32:51.781+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_100.json to Minio
+[2024-05-10T05:32:53.138+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_101.json to Minio
+[2024-05-10T05:32:54.425+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_102.json to Minio
+[2024-05-10T05:32:56.016+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_103.json to Minio
+[2024-05-10T05:33:17.191+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T05:33:17.194+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 653, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 806, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.elsevier.com', port=443): Max retries exceeded with url: /content/abstract/DOI:10.1097/ICO.0000000000001206?apiKey=94da3310047d027793b893cf94e4f374&view=FULL&httpAccept=application/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/get_api_data.py", line 45, in get_api_data
+    research_data = requests.get('https://api.elsevier.com/content/abstract/DOI:' + dois[i] + '?apiKey=' + apiKey + '&view=FULL&httpAccept=application/json')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.elsevier.com', port=443): Max retries exceeded with url: /content/abstract/DOI:10.1097/ICO.0000000000001206?apiKey=94da3310047d027793b893cf94e4f374&view=FULL&httpAccept=application/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+[2024-05-10T05:33:17.270+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=get_api_data, run_id=manual__2024-05-10T05:03:57.192168+00:00, execution_date=20240510T050357, start_date=20240510T053003, end_date=20240510T053317
+[2024-05-10T05:33:17.314+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 279 for task get_api_data (HTTPSConnectionPool(host='api.elsevier.com', port=443): Max retries exceeded with url: /content/abstract/DOI:10.1097/ICO.0000000000001206?apiKey=94da3310047d027793b893cf94e4f374&view=FULL&httpAccept=application/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))); 16336)
+[2024-05-10T05:33:17.341+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T05:33:17.367+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T05:33:17.370+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

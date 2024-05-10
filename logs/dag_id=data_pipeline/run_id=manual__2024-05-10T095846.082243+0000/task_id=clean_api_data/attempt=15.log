@@ -1,0 +1,50 @@
+[2024-05-10T10:13:40.449+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T10:13:40.471+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T09:58:46.082243+00:00 [queued]>
+[2024-05-10T10:13:40.478+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T09:58:46.082243+00:00 [queued]>
+[2024-05-10T10:13:40.479+0000] {taskinstance.py:2306} INFO - Starting attempt 15 of 18
+[2024-05-10T10:13:40.488+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_api_data> on 2024-05-10 09:58:46.082243+00:00
+[2024-05-10T10:13:40.494+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=735) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T10:13:40.495+0000] {standard_task_runner.py:63} INFO - Started process 740 to run task
+[2024-05-10T10:13:40.494+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'clean_api_data', 'manual__2024-05-10T09:58:46.082243+00:00', '--job-id', '366', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpmabonkgx']
+[2024-05-10T10:13:40.495+0000] {standard_task_runner.py:91} INFO - Job 366: Subtask clean_api_data
+[2024-05-10T10:13:40.505+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T10:13:40.529+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T09:58:46.082243+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T10:13:40.605+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='clean_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T09:58:46.082243+00:00' AIRFLOW_CTX_TRY_NUMBER='15' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T09:58:46.082243+00:00'
+[2024-05-10T10:13:40.607+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T10:13:40.671+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Shear capacity of high performance fiber reinf...  ...  [Fiber content, High performance fiber reinfor...
+1                   Mutation operators in BPMN model  ...        [BPMN, Mutation Operator, Mutation Testing]
+2  Characteristics and catalytic properties of Ni...  ...  [CO2 hydrogenation, Methanation, Nickel cataly...
+3  Disruption of c-Kit Signaling in KitW-sh/W-sh ...  ...                                                 []
+4  Ce3+-ion-induced visible-light photocatalytic ...  ...                                                 []
+
+[5 rows x 5 columns]
+[2024-05-10T10:13:40.733+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  shear capacity of high performance fiber reinf...  ...  ['fiber content', 'high performance fiber rein...
+1                   mutation operators in bpmn model  ...  ['bpmn', 'mutation operator', 'mutation testing']
+2  characteristics and catalytic properties of ni...  ...  ['co2 hydrogenation', 'methanation', 'nickel c...
+3  disruption of c-kit signaling in kitw-sh/w-sh ...  ...                                                 []
+4  ce3+-ion-induced visible-light photocatalytic ...  ...                                                 []
+
+[5 rows x 5 columns]
+[2024-05-10T10:13:40.733+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/data/api_data_csv/api_data.csvapi_data.csv
+[2024-05-10T10:13:40.760+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_csv/api_data.csv to Minio
+[2024-05-10T10:13:40.761+0000] {python.py:237} INFO - Done. Returned value was:                                                  title  ...                                           keywords
+0    shear capacity of high performance fiber reinf...  ...  ['fiber content', 'high performance fiber rein...
+1                     mutation operators in bpmn model  ...  ['bpmn', 'mutation operator', 'mutation testing']
+2    characteristics and catalytic properties of ni...  ...  ['co2 hydrogenation', 'methanation', 'nickel c...
+3    disruption of c-kit signaling in kitw-sh/w-sh ...  ...                                                 []
+4    ce3+-ion-induced visible-light photocatalytic ...  ...                                                 []
+..                                                 ...  ...                                                ...
+995  towards 5g cellular: understanding 3d in-build...  ...  ['5g', 'architecture', 'control-/user-plane', ...
+996  modeling of root-reinforced soil slope under r...  ...  ['centrifuge modeling', 'landslides', 'seepage...
+997  production of massoia lactone by aureobasidium...  ...  ['aureobasidium pullulans', 'fragrant biosurfa...
+998  efficiencies of nf and ro membranes on pharmac...  ...  ['carbamazepine', 'membrane fouling', 'nanofil...
+999  two-dimensional modeling of the oxidative coup...  ...  ['fixed bed reactor', 'gas hour space velocity...
+
+[1000 rows x 5 columns]
+[2024-05-10T10:13:40.767+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T10:13:40.836+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=clean_api_data, run_id=manual__2024-05-10T09:58:46.082243+00:00, execution_date=20240510T095846, start_date=20240510T101340, end_date=20240510T101340
+[2024-05-10T10:13:40.868+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T10:13:40.893+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T10:13:40.895+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

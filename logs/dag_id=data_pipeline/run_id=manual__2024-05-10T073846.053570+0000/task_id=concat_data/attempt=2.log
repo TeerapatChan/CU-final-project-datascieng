@@ -1,0 +1,30 @@
+[2024-05-10T07:40:05.639+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T07:40:05.660+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.concat_data manual__2024-05-10T07:38:46.053570+00:00 [queued]>
+[2024-05-10T07:40:05.666+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.concat_data manual__2024-05-10T07:38:46.053570+00:00 [queued]>
+[2024-05-10T07:40:05.667+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 5
+[2024-05-10T07:40:05.678+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): concat_data> on 2024-05-10 07:38:46.053570+00:00
+[2024-05-10T07:40:05.683+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=20975) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T07:40:05.684+0000] {standard_task_runner.py:63} INFO - Started process 20977 to run task
+[2024-05-10T07:40:05.683+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'concat_data', 'manual__2024-05-10T07:38:46.053570+00:00', '--job-id', '318', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp0t_appsi']
+[2024-05-10T07:40:05.685+0000] {standard_task_runner.py:91} INFO - Job 318: Subtask concat_data
+[2024-05-10T07:40:05.695+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T07:40:05.720+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.concat_data manual__2024-05-10T07:38:46.053570+00:00 [running]> on host 3031e573f05c
+[2024-05-10T07:40:05.785+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='concat_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T07:38:46.053570+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T07:38:46.053570+00:00'
+[2024-05-10T07:40:05.786+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T07:40:06.108+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Publichealthandinternationalepidemiologyforrad...  ...                                                 []
+1  FlexiblePrintedActiveAntennaforDigitalTelevisi...  ...                                                 []
+2  Parametricstudyofhydrogenproductionviasorption...  ...  [CirculatingfluidizedbedComputationalfluiddyna...
+3  Superhydrophobiccoatingfromfluoroalkylsilanemo...  ...  [EncapsulationFluoroalkylsilaneNaturalrubberOi...
+4  ElectrochemicalimpedancebasedDNAsensorusingpyr...  ...  [acpcPNAElectrochemicalimpedancespectroscopyMy...
+
+[5 rows x 5 columns]
+[2024-05-10T07:40:06.109+0000] {logging_mixin.py:188} INFO - 22229
+[2024-05-10T07:40:06.559+0000] {logging_mixin.py:188} INFO - 22229
+[2024-05-10T07:40:06.716+0000] {logging_mixin.py:188} INFO - Uploaded data/database.csv to Minio
+[2024-05-10T07:40:06.719+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T07:40:06.719+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T07:40:06.727+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=concat_data, run_id=manual__2024-05-10T07:38:46.053570+00:00, execution_date=20240510T073846, start_date=20240510T074005, end_date=20240510T074006
+[2024-05-10T07:40:06.780+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T07:40:06.794+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T07:40:06.802+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

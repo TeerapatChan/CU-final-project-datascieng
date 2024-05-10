@@ -1,0 +1,57 @@
+[2024-05-10T11:59:08.549+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T11:59:08.571+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T11:59:08.578+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T11:59:08.579+0000] {taskinstance.py:2306} INFO - Starting attempt 49 of 52
+[2024-05-10T11:59:08.589+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T11:59:08.596+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5092) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T11:59:08.597+0000] {standard_task_runner.py:63} INFO - Started process 5094 to run task
+[2024-05-10T11:59:08.596+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '435', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpi7py7j52']
+[2024-05-10T11:59:08.598+0000] {standard_task_runner.py:91} INFO - Job 435: Subtask divide_data
+[2024-05-10T11:59:08.608+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T11:59:08.632+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T11:59:08.698+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='49' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T11:59:08.699+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T11:59:09.330+0000] {logging_mixin.py:188} INFO - 0        Public health and international epidemiology f...
+1        Flexible Printed Active Antenna for Digital Te...
+2        Parametric study of hydrogen production via so...
+3        Parametric study of hydrogen production via so...
+4        Parametric study of hydrogen production via so...
+                               ...                        
+87666    Towards 5G cellular  Understanding 3D in-build...
+87667    Modeling of root-reinforced soil slope under r...
+87668    Production of massoia lactone by Aureobasidium...
+87669    Efficiencies of NF and RO membranes on pharmac...
+87670    Two-dimensional modeling of the oxidative coup...
+Name: title, Length: 87671, dtype: object
+[2024-05-10T11:59:09.403+0000] {logging_mixin.py:188} INFO - 0                                                         
+1                                                         
+2                                Circulating fluidized bed
+3                             Computational fluid dynamics
+4                                   Multiphase flow models
+                               ...                        
+87666    5GArchitectureControl- user-planeFemtocellFreq...
+87667    Centrifuge modelingLandslidesSeepage analysisS...
+87668    Aureobasidium pullulansfragrant biosurfactantm...
+87669    CarbamazepineMembrane foulingNanofiltrationRev...
+87670    Fixed bed reactorGas hour space velocity (GHSV...
+Name: keyword, Length: 87671, dtype: object
+[2024-05-10T11:59:09.419+0000] {logging_mixin.py:188} INFO - 0         
+1         
+2         
+3         
+4         
+        ..
+87666     
+87667     
+87668     
+87669     
+87670     
+Name: publication_year, Length: 87671, dtype: object
+[2024-05-10T11:59:13.982+0000] {logging_mixin.py:188} INFO - Uploaded data/title_keywords.csv to Minio
+[2024-05-10T11:59:14.202+0000] {logging_mixin.py:188} INFO - Uploaded data/title_affiliation.csv to Minio
+[2024-05-10T11:59:14.204+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T11:59:14.205+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T11:59:14.211+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T115908, end_date=20240510T115914
+[2024-05-10T11:59:14.256+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T11:59:14.268+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T11:59:14.270+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

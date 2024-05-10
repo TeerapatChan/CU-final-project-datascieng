@@ -1,0 +1,27 @@
+[2024-05-09T23:33:05.671+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T23:33:05.694+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.clean_data manual__2024-05-09T23:23:25.210789+00:00 [queued]>
+[2024-05-09T23:33:05.704+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.clean_data manual__2024-05-09T23:23:25.210789+00:00 [queued]>
+[2024-05-09T23:33:05.705+0000] {taskinstance.py:2306} INFO - Starting attempt 9 of 12
+[2024-05-09T23:33:05.717+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_data> on 2024-05-09 23:23:25.210789+00:00
+[2024-05-09T23:33:05.724+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3889) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T23:33:05.724+0000] {standard_task_runner.py:63} INFO - Started process 3891 to run task
+[2024-05-09T23:33:05.723+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'clean_data', 'manual__2024-05-09T23:23:25.210789+00:00', '--job-id', '157', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpjpb8psa1']
+[2024-05-09T23:33:05.725+0000] {standard_task_runner.py:91} INFO - Job 157: Subtask clean_data
+[2024-05-09T23:33:05.737+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T23:33:05.766+0000] {task_command.py:426} INFO - Running <TaskInstance: ml_pipeline.clean_data manual__2024-05-09T23:23:25.210789+00:00 [running]> on host 3031e573f05c
+[2024-05-09T23:33:05.843+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='clean_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T23:23:25.210789+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-09T23:23:25.210789+00:00'
+[2024-05-09T23:33:05.844+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T23:33:05.904+0000] {logging_mixin.py:188} INFO -                                                title  ...                                           keywords
+0  Shear capacity of high performance fiber reinf...  ...  [Fiber content, High performance fiber reinfor...
+1                   Mutation operators in BPMN model  ...        [BPMN, Mutation Operator, Mutation Testing]
+2  Characteristics and catalytic properties of Ni...  ...  [CO2 hydrogenation, Methanation, Nickel cataly...
+3  Valorization of biodiesel plant-derived produc...  ...  [Calcium oxides, Dolomite, Fatty acid methyl e...
+4  Orthodontic evaluation by cluster and factor a...  ...  [3D, airway, cluster, Factor: dimensional prof...
+
+[5 rows x 5 columns]
+[2024-05-09T23:33:05.904+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-09T23:33:05.905+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T23:33:05.912+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=clean_data, run_id=manual__2024-05-09T23:23:25.210789+00:00, execution_date=20240509T232325, start_date=20240509T233305, end_date=20240509T233305
+[2024-05-09T23:33:05.938+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-09T23:33:05.953+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T23:33:05.954+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

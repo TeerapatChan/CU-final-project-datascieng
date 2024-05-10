@@ -1,0 +1,70 @@
+[2024-05-09T23:23:28.124+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T23:23:28.146+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.get_api_data manual__2024-05-09T23:23:25.210789+00:00 [queued]>
+[2024-05-09T23:23:28.153+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.get_api_data manual__2024-05-09T23:23:25.210789+00:00 [queued]>
+[2024-05-09T23:23:28.154+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-09T23:23:28.165+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_api_data> on 2024-05-09 23:23:25.210789+00:00
+[2024-05-09T23:23:28.172+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3274) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T23:23:28.174+0000] {standard_task_runner.py:63} INFO - Started process 3276 to run task
+[2024-05-09T23:23:28.172+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'get_api_data', 'manual__2024-05-09T23:23:25.210789+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpmqmikit8']
+[2024-05-09T23:23:28.175+0000] {standard_task_runner.py:91} INFO - Job 149: Subtask get_api_data
+[2024-05-09T23:23:28.186+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T23:23:28.214+0000] {task_command.py:426} INFO - Running <TaskInstance: ml_pipeline.get_api_data manual__2024-05-09T23:23:25.210789+00:00 [running]> on host 3031e573f05c
+[2024-05-09T23:23:28.289+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='get_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T23:23:25.210789+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-09T23:23:25.210789+00:00'
+[2024-05-09T23:23:28.290+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T23:23:29.304+0000] {logging_mixin.py:188} INFO - Retrieved data for page 0
+[2024-05-09T23:23:29.967+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_0.json
+[2024-05-09T23:23:29.995+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_0.json to Minio
+[2024-05-09T23:23:30.528+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_1.json
+[2024-05-09T23:23:30.593+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_1.json to Minio
+[2024-05-09T23:23:31.579+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_2.json
+[2024-05-09T23:23:31.608+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_2.json to Minio
+[2024-05-09T23:23:32.177+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_3.json
+[2024-05-09T23:23:32.202+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_3.json to Minio
+[2024-05-09T23:23:32.768+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_4.json
+[2024-05-09T23:23:32.792+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_4.json to Minio
+[2024-05-09T23:23:33.714+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_5.json
+[2024-05-09T23:23:33.758+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_5.json to Minio
+[2024-05-09T23:23:34.384+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_6.json
+[2024-05-09T23:23:34.411+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_6.json to Minio
+[2024-05-09T23:23:34.965+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_7.json
+[2024-05-09T23:23:34.996+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_7.json to Minio
+[2024-05-09T23:23:35.567+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_8.json
+[2024-05-09T23:23:35.588+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_8.json to Minio
+[2024-05-09T23:23:36.266+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_9.json
+[2024-05-09T23:23:36.286+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_9.json to Minio
+[2024-05-09T23:23:36.884+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_10.json
+[2024-05-09T23:23:36.909+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_10.json to Minio
+[2024-05-09T23:23:37.490+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_11.json
+[2024-05-09T23:23:37.512+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_11.json to Minio
+[2024-05-09T23:23:38.095+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_12.json
+[2024-05-09T23:23:38.150+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_12.json to Minio
+[2024-05-09T23:23:38.740+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_13.json
+[2024-05-09T23:23:38.761+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_13.json to Minio
+[2024-05-09T23:23:39.325+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_14.json
+[2024-05-09T23:23:39.349+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_14.json to Minio
+[2024-05-09T23:23:40.019+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_15.json
+[2024-05-09T23:23:40.047+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_15.json to Minio
+[2024-05-09T23:23:40.665+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_16.json
+[2024-05-09T23:23:40.692+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_16.json to Minio
+[2024-05-09T23:23:41.231+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_17.json
+[2024-05-09T23:23:41.254+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_17.json to Minio
+[2024-05-09T23:23:41.832+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_18.json
+[2024-05-09T23:23:41.872+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_18.json to Minio
+[2024-05-09T23:23:42.423+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_19.json
+[2024-05-09T23:23:42.470+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_19.json to Minio
+[2024-05-09T23:23:43.124+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_20.json
+[2024-05-09T23:23:43.140+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_20.json to Minio
+[2024-05-09T23:23:43.831+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_21.json
+[2024-05-09T23:23:43.854+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_21.json to Minio
+[2024-05-09T23:23:44.603+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_22.json
+[2024-05-09T23:23:44.620+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_22.json to Minio
+[2024-05-09T23:23:45.225+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_23.json
+[2024-05-09T23:23:45.283+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_23.json to Minio
+[2024-05-09T23:23:45.968+0000] {logging_mixin.py:188} INFO - Saved data to /opt/***/dags/***_data/api_data_json/research_24.json
+[2024-05-09T23:23:46.032+0000] {logging_mixin.py:188} INFO - Uploaded data/api_data_json/research_24.json to Minio
+[2024-05-09T23:23:46.040+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-09T23:23:46.048+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T23:23:46.075+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=get_api_data, run_id=manual__2024-05-09T23:23:25.210789+00:00, execution_date=20240509T232325, start_date=20240509T232328, end_date=20240509T232346
+[2024-05-09T23:23:46.136+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-09T23:23:46.173+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T23:23:46.176+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,37 @@
+[2024-05-10T13:28:54.407+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T13:28:54.431+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T13:28:54.437+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T13:28:54.438+0000] {taskinstance.py:2306} INFO - Starting attempt 116 of 119
+[2024-05-10T13:28:54.448+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T13:28:54.454+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=9350) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T13:28:54.455+0000] {standard_task_runner.py:63} INFO - Started process 9352 to run task
+[2024-05-10T13:28:54.454+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '545', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp98_g98b9']
+[2024-05-10T13:28:54.455+0000] {standard_task_runner.py:91} INFO - Job 545: Subtask divide_data
+[2024-05-10T13:28:54.465+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T13:28:54.490+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T13:28:54.557+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='116' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T13:28:54.558+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T13:28:59.059+0000] {logging_mixin.py:188} INFO - 0                                                   []
+1                                                   []
+2    ['Circulating fluidized bed', 'Computational f...
+3    ['Encapsulation', 'Fluoroalkylsilane', 'Natura...
+4    ['acpcPNA', 'Electrochemical impedance spectro...
+Name: keywords, dtype: object <class 'pandas.core.series.Series'>
+[2024-05-10T13:28:59.060+0000] {logging_mixin.py:188} INFO - 0    ['Stanford University School of Medicine', 'Ch...
+1                         ['Chulalongkorn University']
+2                         ['Chulalongkorn University']
+3    ['Hirosaki University', 'Chulalongkorn Univers...
+4    ['Chulalongkorn University', 'Thailand Nationa...
+Name: affiliation_name, dtype: object <class 'pandas.core.series.Series'>
+[2024-05-10T13:28:59.062+0000] {logging_mixin.py:188} INFO - 0    ['United States', 'Thailand', 'Thailand', 'Uni...
+1                                         ['Thailand']
+2                                         ['Thailand']
+3    ['Japan', 'Thailand', 'Thailand', 'Japan', 'Th...
+4    ['Thailand', 'Thailand', 'United States', 'Tha...
+Name: affiliation_country, dtype: object <class 'pandas.core.series.Series'>
+[2024-05-10T13:28:59.079+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T13:28:59.080+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T13:28:59.087+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T132854, end_date=20240510T132859
+[2024-05-10T13:28:59.123+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T13:28:59.135+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T13:28:59.138+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

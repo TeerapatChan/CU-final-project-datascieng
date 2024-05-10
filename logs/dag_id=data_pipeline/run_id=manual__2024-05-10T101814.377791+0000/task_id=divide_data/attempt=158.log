@@ -1,0 +1,31 @@
+[2024-05-10T14:33:58.530+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T14:33:58.556+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:33:58.565+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T14:33:58.566+0000] {taskinstance.py:2306} INFO - Starting attempt 158 of 161
+[2024-05-10T14:33:58.578+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T14:33:58.584+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=12120) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T14:33:58.586+0000] {standard_task_runner.py:63} INFO - Started process 12122 to run task
+[2024-05-10T14:33:58.585+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '601', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpk_43ou0p']
+[2024-05-10T14:33:58.587+0000] {standard_task_runner.py:91} INFO - Job 601: Subtask divide_data
+[2024-05-10T14:33:58.601+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T14:33:58.631+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T14:33:58.704+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='158' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T14:33:58.705+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T14:34:01.266+0000] {logging_mixin.py:188} INFO - <class 'pandas.core.frame.DataFrame'>
+Index: 21121 entries, 0 to 21120
+Data columns (total 4 columns):
+ #   Column               Non-Null Count  Dtype 
+---  ------               --------------  ----- 
+ 0   title                21121 non-null  object
+ 1   affiliation_name     21121 non-null  object
+ 2   affiliation_country  21121 non-null  object
+ 3   keywords             21121 non-null  object
+dtypes: object(4)
+memory usage: 1.3+ MB
+[2024-05-10T14:34:01.266+0000] {logging_mixin.py:188} INFO - None
+[2024-05-10T14:34:01.269+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-10T14:34:01.270+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T14:34:01.277+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T143358, end_date=20240510T143401
+[2024-05-10T14:34:01.328+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-10T14:34:01.343+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T14:34:01.346+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

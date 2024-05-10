@@ -1,0 +1,11 @@
+tensorflow
+pandas
+numpy
+keras
+matplotlib
+nltk
+scikit-learn
+minio
+joblib
+networkx
+apache-airflow-providers-apache-spark

@@ -1,0 +1,111 @@
+[2024-05-10T12:21:26.423+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T12:21:26.446+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:21:26.452+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:21:26.453+0000] {taskinstance.py:2306} INFO - Starting attempt 66 of 69
+[2024-05-10T12:21:26.464+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T12:21:26.470+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6104) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T12:21:26.471+0000] {standard_task_runner.py:63} INFO - Started process 6106 to run task
+[2024-05-10T12:21:26.470+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '458', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpkyx_bqg7']
+[2024-05-10T12:21:26.472+0000] {standard_task_runner.py:91} INFO - Job 458: Subtask divide_data
+[2024-05-10T12:21:26.483+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T12:21:26.508+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T12:21:26.574+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='66' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T12:21:26.575+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T12:21:26.748+0000] {logging_mixin.py:188} INFO - 0        Public health and international epidemiology f...
+1        Flexible Printed Active Antenna for Digital Te...
+2        Parametric study of hydrogen production via so...
+3        Superhydrophobic coating from fluoroalkylsilan...
+4        Electrochemical impedance based DNA sensor usi...
+                               ...                        
+21132    Usability evaluation of the university library...
+21133    Two decades' contribution of occupational medi...
+21134    Patients' Perceived Treatment Effectiveness in...
+21135    Counter intuitive channel allocation improveme...
+21507    Corrigendum to "A comparison of eugenol and me...
+Name: title, Length: 21137, dtype: object
+[2024-05-10T12:21:26.749+0000] {logging_mixin.py:188} INFO - 0        [ Stanford University School of Medicine ,  Ch...
+1                             [ Chulalongkorn University ]
+2                             [ Chulalongkorn University ]
+3        [ Hirosaki University ,  Chulalongkorn Univers...
+4        [ Chulalongkorn University ,  Thailand Nationa...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: affiliation_name, Length: 21137, dtype: object
+[2024-05-10T12:21:26.750+0000] {logging_mixin.py:188} INFO - 0        [ United States ,  Thailand ,  Thailand ,  Uni...
+1                                             [ Thailand ]
+2                                             [ Thailand ]
+3        [ Japan ,  Thailand ,  Thailand ,  Japan ,  Th...
+4        [ Thailand ,  Thailand ,  United States ,  Tha...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: affiliation_country, Length: 21137, dtype: object
+[2024-05-10T12:21:26.751+0000] {logging_mixin.py:188} INFO - 0            
+1            
+2            
+3            
+4            
+         ... 
+21132        
+21133        
+21134        
+21135        
+21507    2016
+Name: publication_year, Length: 21137, dtype: object
+[2024-05-10T12:21:26.752+0000] {logging_mixin.py:188} INFO - 0                                                       []
+1                                                       []
+2        [ Circulating fluidized bed ,  Computational f...
+3        [ Encapsulation ,  Fluoroalkylsilane ,  Natura...
+4        [ acpcPNA ,  Electrochemical impedance spectro...
+                               ...                        
+21132                                                     
+21133                                                     
+21134                                                     
+21135                                                     
+21507                                                     
+Name: keywords, Length: 21137, dtype: object
+[2024-05-10T12:21:26.755+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T12:21:26.756+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/divide_data.py", line 35, in divide_data
+    title_keywords_year(df, file_path_to_upload)
+  File "/opt/airflow/dags/tasks/divide_data.py", line 53, in title_keywords_year
+    df['keywords'] = l
+    ~~^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4091, in __setitem__
+    self._set_item(key, value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4300, in _set_item
+    value, refs = self._sanitize_column(value)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 5039, in _sanitize_column
+    com.require_length_match(value, self.index)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/common.py", line 561, in require_length_match
+    raise ValueError(
+ValueError: Length of values (5) does not match length of index (21137)
+[2024-05-10T12:21:26.768+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T122126, end_date=20240510T122126
+[2024-05-10T12:21:26.776+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 458 for task divide_data (Length of values (5) does not match length of index (21137); 6106)
+[2024-05-10T12:21:26.806+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T12:21:26.821+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T12:21:26.823+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

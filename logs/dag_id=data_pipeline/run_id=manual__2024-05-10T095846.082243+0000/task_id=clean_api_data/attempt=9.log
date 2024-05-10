@@ -1,0 +1,86 @@
+[2024-05-10T10:06:55.855+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T10:06:55.878+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T09:58:46.082243+00:00 [queued]>
+[2024-05-10T10:06:55.884+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T09:58:46.082243+00:00 [queued]>
+[2024-05-10T10:06:55.885+0000] {taskinstance.py:2306} INFO - Starting attempt 9 of 12
+[2024-05-10T10:06:55.896+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_api_data> on 2024-05-10 09:58:46.082243+00:00
+[2024-05-10T10:06:55.902+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=467) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T10:06:55.903+0000] {standard_task_runner.py:63} INFO - Started process 469 to run task
+[2024-05-10T10:06:55.902+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'clean_api_data', 'manual__2024-05-10T09:58:46.082243+00:00', '--job-id', '356', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp3iya6s30']
+[2024-05-10T10:06:55.903+0000] {standard_task_runner.py:91} INFO - Job 356: Subtask clean_api_data
+[2024-05-10T10:06:55.913+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T10:06:55.937+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.clean_api_data manual__2024-05-10T09:58:46.082243+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T10:06:56.002+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='clean_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T09:58:46.082243+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T09:58:46.082243+00:00'
+[2024-05-10T10:06:56.003+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T10:06:56.078+0000] {logging_mixin.py:188} INFO -                                                  title  ...                                           keywords
+0    Shear capacity of high performance fiber reinf...  ...  [Fiber content, High performance fiber reinfor...
+1                     Mutation operators in BPMN model  ...        [BPMN, Mutation Operator, Mutation Testing]
+2    Characteristics and catalytic properties of Ni...  ...  [CO2 hydrogenation, Methanation, Nickel cataly...
+3    Disruption of c-Kit Signaling in KitW-sh/W-sh ...  ...                                                 []
+4    Ce3+-ion-induced visible-light photocatalytic ...  ...                                                 []
+..                                                 ...  ...                                                ...
+995  Towards 5G cellular: Understanding 3D in-build...  ...  [5G, Architecture, Control-/user-plane, Femtoc...
+996  Modeling of root-reinforced soil slope under r...  ...  [Centrifuge modeling, Landslides, Seepage anal...
+997  Production of massoia lactone by Aureobasidium...  ...  [Aureobasidium pullulans, fragrant biosurfacta...
+998  Efficiencies of NF and RO membranes on pharmac...  ...  [Carbamazepine, Membrane fouling, Nanofiltrati...
+999  Two-dimensional modeling of the oxidative coup...  ...  [Fixed bed reactor, Gas hour space velocity (G...
+
+[1000 rows x 5 columns]
+[2024-05-10T10:06:56.082+0000] {logging_mixin.py:188} WARNING - /opt/***/dags/tasks/clean_data.py:63 FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+[2024-05-10T10:06:56.090+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T10:06:56.091+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/clean_data.py", line 63, in clean_api_data
+    df = df.applymap(cleanse_unicode)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10174, in applymap
+    return self.map(func, na_action=na_action, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10120, in map
+    return self.apply(infer).__finalize__(self, "map")
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10034, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/apply.py", line 837, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/apply.py", line 965, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/apply.py", line 981, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 10118, in infer
+    return x._map_values(func, na_action=na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/algorithms.py", line 1814, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "lib.pyx", line 2926, in pandas._libs.lib.map_infer
+  File "/opt/airflow/dags/tasks/clean_data.py", line 14, in cleanse_unicode
+    temp = single_quote_expr.sub("'", s, re.U)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'list'
+[2024-05-10T10:06:56.103+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=clean_api_data, run_id=manual__2024-05-10T09:58:46.082243+00:00, execution_date=20240510T095846, start_date=20240510T100655, end_date=20240510T100656
+[2024-05-10T10:06:56.112+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 356 for task clean_api_data (expected string or bytes-like object, got 'list'; 469)
+[2024-05-10T10:06:56.156+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T10:06:56.173+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T10:06:56.175+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

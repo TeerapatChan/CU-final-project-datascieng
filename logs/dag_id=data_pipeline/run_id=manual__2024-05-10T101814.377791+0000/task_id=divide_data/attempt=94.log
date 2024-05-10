@@ -1,0 +1,90 @@
+[2024-05-10T12:37:35.240+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-10T12:37:35.262+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:37:35.269+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [queued]>
+[2024-05-10T12:37:35.270+0000] {taskinstance.py:2306} INFO - Starting attempt 94 of 97
+[2024-05-10T12:37:35.281+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): divide_data> on 2024-05-10 10:18:14.377791+00:00
+[2024-05-10T12:37:35.287+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=7069) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-10T12:37:35.288+0000] {standard_task_runner.py:63} INFO - Started process 7071 to run task
+[2024-05-10T12:37:35.287+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'divide_data', 'manual__2024-05-10T10:18:14.377791+00:00', '--job-id', '497', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpm1fnel6u']
+[2024-05-10T12:37:35.289+0000] {standard_task_runner.py:91} INFO - Job 497: Subtask divide_data
+[2024-05-10T12:37:35.300+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-10T12:37:35.328+0000] {task_command.py:426} INFO - Running <TaskInstance: data_pipeline.divide_data manual__2024-05-10T10:18:14.377791+00:00 [running]> on host dbfcb70dcca2
+[2024-05-10T12:37:35.395+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='divide_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-10T10:18:14.377791+00:00' AIRFLOW_CTX_TRY_NUMBER='94' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-10T10:18:14.377791+00:00'
+[2024-05-10T12:37:35.396+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-10T12:37:35.575+0000] {logging_mixin.py:188} INFO -                                                    title  ...                                           keywords
+0      Public health and international epidemiology f...  ...                                                 []
+1      Flexible Printed Active Antenna for Digital Te...  ...                                                 []
+2      Parametric study of hydrogen production via so...  ...  [ Circulating fluidized bed ,  Computational f...
+3      Superhydrophobic coating from fluoroalkylsilan...  ...  [ Encapsulation ,  Fluoroalkylsilane ,  Natura...
+4      Electrochemical impedance based DNA sensor usi...  ...  [ acpcPNA ,  Electrochemical impedance spectro...
+...                                                  ...  ...                                                ...
+21132  Usability evaluation of the university library...  ...                                                   
+21133  Two decades' contribution of occupational medi...  ...                                                   
+21134  Patients' Perceived Treatment Effectiveness in...  ...                                                   
+21135  Counter intuitive channel allocation improveme...  ...                                                   
+21136  Corrigendum to "A comparison of eugenol and me...  ...                                                   
+
+[21137 rows x 5 columns]
+[2024-05-10T12:37:35.576+0000] {logging_mixin.py:188} INFO - 0         
+1         
+2         
+3         
+4         
+        ..
+21132     
+21133     
+21134     
+21135     
+21136     
+Name: publication_year, Length: 21137, dtype: object
+[2024-05-10T12:37:35.579+0000] {logging_mixin.py:188} INFO - 0         
+1         
+2         
+3         
+4         
+        ..
+21132     
+21133     
+21134     
+21135     
+21136     
+Name: publication_year, Length: 21137, dtype: object
+[2024-05-10T12:37:37.195+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-10T12:37:37.195+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tasks/divide_data.py", line 36, in divide_data
+    title_keywords_year(df, file_path_to_upload)
+  File "/opt/airflow/dags/tasks/divide_data.py", line 81, in title_keywords_year
+    new_df.to_csv(file_path_to_upload + 'title_keywords.csv', index=False)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/data/title_keywords.csv'
+[2024-05-10T12:37:37.207+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=divide_data, run_id=manual__2024-05-10T10:18:14.377791+00:00, execution_date=20240510T101814, start_date=20240510T123735, end_date=20240510T123737
+[2024-05-10T12:37:37.218+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 497 for task divide_data ([Errno 13] Permission denied: '/opt/airflow/data/title_keywords.csv'; 7071)
+[2024-05-10T12:37:37.229+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-10T12:37:37.246+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-10T12:37:37.248+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
