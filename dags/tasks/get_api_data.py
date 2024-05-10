@@ -37,7 +37,7 @@ def get_api_data():
     )
     idx = 25
     last_page = 0
-    dois = fetch_data(idx, apiKey, last_page, last_page+1)
+    dois = fetch_data(idx, apiKey, last_page, last_page+40)
     bucket_name = "datapipeline"
 
     print(minio_client.bucket_exists(bucket_name))
